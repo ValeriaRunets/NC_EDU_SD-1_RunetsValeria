@@ -1,7 +1,7 @@
 package backend.service;
 
 import backend.entity.User;
-import com.sun.tools.javac.util.List;
+import java.util.*;
 
 public interface UserService {
 

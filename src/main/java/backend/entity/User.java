@@ -2,15 +2,18 @@ package backend.entity;
 
 import javax.persistence.*;
 import java.util.Objects;
+import java.util.*;
 
+@Entity
 @Table(name="user")
 public class User {
-    private enum Role{ADMIN, USER}
+    public enum Role{ADMIN, USER}
     private long id;
     private String name;
     private Role role;
     private String password;
     private String login;
+    private Collection<Meeting> meetings;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -59,6 +62,18 @@ public class User {
         this.login = login;
     }
 
+    @ManyToMany
+    @JoinTable(name = "user_has_meeting",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "meeting_id"))
+    public Collection<Meeting> getMeetings() {
+        return meetings;
+    }
+
+    public void setMeetings(Collection<Meeting> meetings) {
+        this.meetings = meetings;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -74,5 +89,18 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(getId(), getName(), getRole(), getPassword(), getLogin());
+    }
+
+    @Override
+    public String toString() {
+        String str= "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", role=" + role+'\''+
+                ", password='" + password + '\'' +
+                ", login='" + login + '\'' +
+                ", meetings=" +
+                '}';
+        return str;
     }
 }

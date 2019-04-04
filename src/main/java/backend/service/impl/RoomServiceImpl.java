@@ -3,10 +3,14 @@ package backend.service.impl;
 import backend.entity.Room;
 import backend.repository.RoomRepository;
 import backend.service.RoomService;
-import com.sun.tools.javac.util.List;
+import java.util.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class RoomServiceImpl implements RoomService {
 
+    @Autowired
     private RoomRepository repository;
     @Override
     public void delete(long id) {

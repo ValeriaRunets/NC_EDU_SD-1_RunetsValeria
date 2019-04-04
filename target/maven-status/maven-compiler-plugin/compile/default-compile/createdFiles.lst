@@ -1,0 +1,15 @@
+backend\BackendApplication.class
+backend\entity\User.class
+backend\repository\UserRepository.class
+backend\service\impl\RoomServiceImpl.class
+backend\repository\RoomRepository.class
+backend\entity\User$Role.class
+backend\service\impl\UserServiceImpl.class
+backend\service\MeetingService.class
+backend\service\impl\MeetingServiceImpl.class
+backend\service\UserService.class
+backend\entity\Room.class
+backend\controller\UserController.class
+backend\repository\MeetingRepository.class
+backend\entity\Meeting.class
+backend\service\RoomService.class

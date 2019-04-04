@@ -1,7 +1,7 @@
 package backend.service;
 
 import backend.entity.Meeting;
-import com.sun.tools.javac.util.List;
+import java.util.*;
 
 public interface MeetingService {
 

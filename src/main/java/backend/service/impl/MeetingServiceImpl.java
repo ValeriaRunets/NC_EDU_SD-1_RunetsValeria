@@ -3,10 +3,14 @@ package backend.service.impl;
 import backend.entity.Meeting;
 import backend.repository.MeetingRepository;
 import backend.service.MeetingService;
-import com.sun.tools.javac.util.List;
+import java.util.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class MeetingServiceImpl implements MeetingService {
 
+    @Autowired
     private MeetingRepository repository;
     @Override
     public Meeting getById(long id) {

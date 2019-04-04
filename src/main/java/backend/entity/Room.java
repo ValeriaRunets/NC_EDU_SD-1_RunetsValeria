@@ -1,5 +1,7 @@
 package backend.entity;
 
+import java.util.*;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -9,6 +11,7 @@ public class Room {
     private long id;
     private int amount;
     private String adress;
+    private Collection<Meeting> meetings;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,6 +42,16 @@ public class Room {
         this.amount = amount;
     }
 
+    @OneToMany(mappedBy = "room")
+    public Collection<Meeting> getMeetings() {
+        return meetings;
+    }
+
+    public void setMeetings(Collection<Meeting> meetings) {
+        this.meetings = meetings;
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -52,5 +65,15 @@ public class Room {
     @Override
     public int hashCode() {
         return Objects.hash(getId(), getAmount(), getAdress());
+    }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "id=" + id +
+                ", amount=" + amount +
+                ", adress='" + adress + '\'' +
+                ", meetings=" + meetings +
+                '}';
     }
 }

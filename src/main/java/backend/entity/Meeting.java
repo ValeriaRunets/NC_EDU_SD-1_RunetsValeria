@@ -1,5 +1,7 @@
 package backend.entity;
 
+import java.util.*;
+
 import java.util.Date;
 
 import javax.persistence.*;
@@ -14,6 +16,7 @@ public class Meeting {
     private String theme;
     private Room room;
     private int timeOfNotification;
+    private Collection<User> members;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -54,7 +57,8 @@ public class Meeting {
         this.theme = theme;
     }
 
-    @Column(name="room")
+    @ManyToOne
+    @JoinColumn(name="room_id")
     public Room getRoom() {
         return room;
     }
@@ -70,6 +74,15 @@ public class Meeting {
 
     public void setTimeOfNotification(int timeOfNotification) {
         this.timeOfNotification = timeOfNotification;
+    }
+
+    @ManyToMany(mappedBy = "meetings")
+    public Collection<User> getMembers() {
+        return members;
+    }
+
+    public void setMembers(Collection<User> members) {
+        this.members = members;
     }
 
     @Override
@@ -88,5 +101,18 @@ public class Meeting {
     @Override
     public int hashCode() {
         return Objects.hash(getId(), getDateOfTheBeginning(), getDateOfEnd(),  getTheme(), getRoom(), getTimeOfNotification());
+    }
+
+    @Override
+    public String toString() {
+        return "Meeting{" +
+                "id=" + id +
+                ", dateOfTheBeginning=" + dateOfTheBeginning +
+                ", dateOfEnd=" + dateOfEnd +
+                ", theme='" + theme + '\'' +
+                ", room=" + room +
+                ", timeOfNotification=" + timeOfNotification +
+                ", members=" +
+                '}';
     }
 }
