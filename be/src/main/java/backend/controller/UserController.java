@@ -15,12 +15,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(path="/api/user/add", method=RequestMethod.POST)
     public User addUser(@RequestBody User user){
         return  userService.addUser(user);
     }
 
-    @RequestMapping(path="/allUsers", method=RequestMethod.GET)
+    @RequestMapping(path="/api/user/all", method=RequestMethod.GET)
     public List<User> findAll(){
         return userService.getAll();
     }
