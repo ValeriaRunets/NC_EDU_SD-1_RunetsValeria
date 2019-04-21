@@ -10,7 +10,7 @@ import java.util.List;
 
 //@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/api1/user")
+@RequestMapping("api1/user")
 public class UserController {
 
     @Autowired
@@ -22,12 +22,17 @@ public class UserController {
     }
 
     @GetMapping("/login/{login}")
-    public User getUserByLogin(@PathVariable String login) {
+    public User getUserByLogin(@PathVariable(name = "login") String login) {
         return userService.findByLogin(login);
     }
 
     @RequestMapping(path = "/add", method = RequestMethod.POST, produces = "application/json")
     public User saveUser(@RequestBody User user) {
         return userService.addUser(user);
+    }
+
+    @RequestMapping("/delete/{id}")
+    public void delete(@PathVariable(name = "id") long id) {
+        userService.delete(id);
     }
 }

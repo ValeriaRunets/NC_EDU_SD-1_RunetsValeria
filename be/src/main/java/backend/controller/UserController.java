@@ -25,7 +25,7 @@ public class UserController {
         return userService.getAll();
     }
 
-    @RequestMapping(path="/deleteUser/{id}", method=RequestMethod.GET)
+    @RequestMapping(path="/api/user/delete/{id}", method=RequestMethod.DELETE)
     public void delete(@PathVariable(name = "id") long id){
         userService.delete(id);
     }

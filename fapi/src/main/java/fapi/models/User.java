@@ -8,6 +8,7 @@ public class User {
     private String name;
     private String password;
     private String login;
+    private String role;
 
     public User(){}
 
@@ -50,4 +51,11 @@ public class User {
         this.login = login;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 }

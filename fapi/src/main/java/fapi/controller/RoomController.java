@@ -1,14 +1,14 @@
-package backend.controller;
+package fapi.controller;
 
-import backend.entity.Room;
-import backend.service.RoomService;
+import fapi.service.RoomService;
+import fapi.models.Room;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("api/room")
+@RequestMapping("api1/room")
 public class RoomController {
     @Autowired
     private RoomService roomService;
