@@ -1,0 +1,15 @@
+<form class="form-1" >
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" (input)="setName($event.target.value)">
+  </div>
+  <div>
+    <label for="login">Login</label>
+    <input type="text" id="login" (input)="setLogin($event.target.value)">
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" (input)="setPassword($event.target.value)">
+  </div>
+  <button (click)="addUser()">Log in</button>
+</form>

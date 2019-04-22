@@ -1,0 +1,31 @@
+<form class="form-1" >
+  <div>
+    <label for="theme">Theme</label>
+    <input type="text" id="theme" (input)="setTheme($event.target.value)">
+  </div>
+  <div>
+    <label for="timeb">Date of the beginning</label>
+    <input type="datetime-local" id="timeb" (input)="setDateOfTheBeginning($event.target.value)">
+  </div>
+  <div>
+    <label for="timee">Date of the end</label>
+    <input type="datetime-local" id="timee" (input)="setDateOfTheEnd($event.target.value)">
+  </div>
+  <div>
+    <label>Room</label>
+    <select>
+      <option *ngFor="let room of rooms; let i = index" [value]="room" (select)="setRoom($event.target.value)">{{room.adress}} {{room.amount}}</option>
+    </select>
+  </div>
+  <div>
+    <label for="notif">Time of notification</label>
+    <input type="number" id="notif" (input)="setTimeOfNotification($event.target.value)">
+  </div>
+  <div>
+    <label >Members</label>
+    <select multiple>
+      <option *ngFor="let user of users; let i = index">{{user.name}}</option>
+    </select>
+  </div>
+  <button (click)="addMeeting()">Add</button>
+</form>

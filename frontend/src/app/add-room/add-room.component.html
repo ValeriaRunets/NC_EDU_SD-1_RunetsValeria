@@ -1,0 +1,11 @@
+<form class="form-1" >
+  <div>
+    <label for="adress">Adress</label>
+    <input type="text" id="adress" (input)="setAdress($event.target.value)">
+  </div>
+  <div>
+    <label for="amount">Amount</label>
+    <input type="number" id="amount" (input)="setAmount($event.target.value)">
+  </div>
+  <button (click)="addRoom()">Add</button>
+</form>

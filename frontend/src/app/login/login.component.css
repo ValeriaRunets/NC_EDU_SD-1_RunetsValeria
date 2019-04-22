@@ -1,0 +1,47 @@
+.form-1 {
+  width: 400px;
+  margin: 60px auto 30px;
+  padding: 10px;
+  position: relative;
+  height: 200px;
+
+  border-radius: 10px;
+  background: bisque;
+}
+label{
+  width: 100%;
+  color: darkgray;
+  display: block;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+input{
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+}
+button{
+  padding: 10px 0;
+  border-width: 0;
+  display: block;
+  width: 120px;
+  margin: 25px auto 0;
+  background: #60e6c5;
+  color: white
+}
+button:hover{
+  padding: 10px 0;
+  border-width: 1px;
+  display: block;
+  width: 120px;
+  margin: 25px auto 0;
+  background: #60e6c5;
+  color: white
+}
