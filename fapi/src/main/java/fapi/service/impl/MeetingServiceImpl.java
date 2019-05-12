@@ -22,13 +22,13 @@ public class MeetingServiceImpl implements MeetingService {
     @Override
     public Meeting addMeeting(Meeting meeting) {
         RestTemplate restTemplate= new RestTemplate();
-        return restTemplate.postForEntity(backendServerUrl+"api/meeting/add", meeting, Meeting.class).getBody();
+        return restTemplate.postForEntity(backendServerUrl+"api/meeting/", meeting, Meeting.class).getBody();
     }
 
     @Override
     public void delete(long id) {
         RestTemplate restTemplate= new RestTemplate();
-        restTemplate.delete(backendServerUrl+"api/meeting/delete/"+id);
+        restTemplate.delete(backendServerUrl+"api/meeting/"+id);
     }
 
     @Override

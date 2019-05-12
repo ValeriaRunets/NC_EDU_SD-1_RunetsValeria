@@ -9,6 +9,7 @@ import {UserService} from '../user.service';
 })
 export class AddUserComponent implements OnInit {
   private user: User = new User();
+  private flag = false;
   constructor(private userService: UserService) { }
 
   ngOnInit() {
@@ -23,6 +24,13 @@ export class AddUserComponent implements OnInit {
     this.user.password = password;
   }
   public addUser() {
-    this.userService.addUser(this.user).subscribe();
+    this.userService.getByLogin(this.user.login).subscribe((val: any) => this.checkLogin(val));
+    if (!this.flag) {
+      this.userService.addUser(this.user).subscribe();
+     }
+  }
+  public checkLogin(val) {
+    if (val != null) {
+      this.flag = true; }
   }
 }

@@ -11,6 +11,7 @@ import java.util.Objects;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Meeting {
     private long id;
+    private String creator;
     private Date dateOfTheBeginning;
     private Date dateOfEnd;
     private String theme;
@@ -26,6 +27,14 @@ public class Meeting {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getCreator() {
+        return creator;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
     }
 
     public Date getDateOfTheBeginning() {
@@ -75,6 +84,8 @@ public class Meeting {
     public void setMembers(Collection<User> members) {
         this.members = members;
     }
+
+    public void addMember(User member){members.add(member);}
 
     @Override
     public boolean equals(Object o) {

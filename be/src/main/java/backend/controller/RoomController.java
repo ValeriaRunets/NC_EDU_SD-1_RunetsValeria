@@ -12,12 +12,12 @@ import java.util.List;
 public class RoomController {
     @Autowired
     private RoomService roomService;
-    @RequestMapping(path="/delete/{id}", method= RequestMethod.DELETE)
+    @RequestMapping(path="/{id}", method= RequestMethod.DELETE)
     public void delete(@PathVariable(name = "id") long id){
         roomService.delete(id);
     }
 
-    @RequestMapping(path = "/add", method= RequestMethod.POST)
+    @RequestMapping(method= RequestMethod.POST)
     public Room addRoom(@RequestBody Room room){
         return roomService.addRoom(room);
     }

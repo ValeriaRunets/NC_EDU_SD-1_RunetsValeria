@@ -1,13 +1,14 @@
 <table border="3px">
   <tr>
+    <th>№</th>
     <th>Adress</th>
     <th>Amount of places</th>
     <th>Delete button</th>
   </tr>
   <tr *ngFor="let room of rooms; let i = index">
-    <td>{{i+1}}</td>
+    <td class="col">{{i+1}}</td>
     <td>{{room.adress}}</td>
     <td>{{room.amount}}</td>
-    <td><button (click)="delete(i)">Delete</button></td>
+    <td class="col"><button (click)="delete(i)">Delete</button></td>
   </tr>
 </table>

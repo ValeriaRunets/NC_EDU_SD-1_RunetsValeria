@@ -6,10 +6,11 @@
   <div>
     <label for="login">Login</label>
     <input type="text" id="login" (input)="setLogin($event.target.value)">
+    <p *ngIf="flag">This login is already exist</p>
   </div>
   <div>
     <label for="password">Password</label>
     <input type="password" id="password" (input)="setPassword($event.target.value)">
   </div>
-  <button (click)="addUser()">Log in</button>
+  <button (click)="addUser()">Add</button>
 </form>

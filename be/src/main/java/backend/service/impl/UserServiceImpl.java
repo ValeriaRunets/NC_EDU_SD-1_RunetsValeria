@@ -29,11 +29,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findByLogin(String login) {
-        return repository.findByLogin(login);
+        User user=repository.findByLogin(login);
+        return user;
     }
 
     @Override
-    public User getById(long id) {
-        return repository.findById(id).get();
-    }
+    public User getById(long id) { return repository.findById(id).get(); }
 }

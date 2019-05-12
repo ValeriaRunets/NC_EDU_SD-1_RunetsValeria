@@ -16,13 +16,13 @@ public class RoomServiceImpl implements RoomService {
     @Override
     public void delete(long id){
         RestTemplate restTemplate=new RestTemplate();
-        restTemplate.delete(backendServerUrl+"api/room/delete/" + id);
+        restTemplate.delete(backendServerUrl+"api/room/" + id);
     }
 
     @Override
     public Room addRoom(Room room) {
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.postForEntity(backendServerUrl + "api/room/add", room, Room.class).getBody();
+        return restTemplate.postForEntity(backendServerUrl + "api/room/", room, Room.class).getBody();
     }
 
     @Override

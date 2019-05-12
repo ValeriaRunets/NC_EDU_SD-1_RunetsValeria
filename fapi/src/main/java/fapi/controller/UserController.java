@@ -26,12 +26,12 @@ public class UserController {
         return userService.findByLogin(login);
     }
 
-    @RequestMapping(path = "/add", method = RequestMethod.POST, produces = "application/json")
+    @RequestMapping(method = RequestMethod.POST, produces = "application/json")
     public User saveUser(@RequestBody User user) {
         return userService.addUser(user);
     }
 
-    @RequestMapping("/delete/{id}")
+    @RequestMapping(path="/{id}", method= RequestMethod.DELETE)
     public void delete(@PathVariable(name = "id") long id) {
         userService.delete(id);
     }

@@ -33,7 +33,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         String userName = null;
         String authToken = null;
         if (header != null && header.startsWith(SecurityJwtConstants.TOKEN_PREFIX)) {
-            authToken = header.replace(SecurityJwtConstants.TOKEN_PREFIX, "");
+            authToken = header.replace(SecurityJwtConstants.TOKEN_PREFIX+" ", "");
             try {
                 userName = tokenProvider.getUsernameFromToken(authToken);
             } catch (IllegalArgumentException e) {

@@ -7,7 +7,6 @@ import {Router} from '@angular/router';
   styleUrls: ['./menu-user.component.css']
 })
 export class MenuUserComponent implements OnInit {
-
   constructor(private router: Router) {
   }
   ngOnInit() {

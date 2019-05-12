@@ -11,6 +11,7 @@ import java.util.Objects;
 @Table(name= "meeting")
 public class Meeting {
     private long id;
+    private String creator;
     private Date dateOfTheBeginning;
     private Date dateOfEnd;
     private String theme;
@@ -29,6 +30,15 @@ public class Meeting {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    @Column(name="creator")
+    public String getCreator() {
+        return creator;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
     }
 
     @Column(name="DateOfTheBeginning")

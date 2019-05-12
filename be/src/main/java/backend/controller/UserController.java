@@ -15,7 +15,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(path="/api/user/add", method=RequestMethod.POST)
+    @RequestMapping(path="/api/user/", method=RequestMethod.POST)
     public User addUser(@RequestBody User user){
         return  userService.addUser(user);
     }
@@ -25,12 +25,12 @@ public class UserController {
         return userService.getAll();
     }
 
-    @RequestMapping(path="/api/user/delete/{id}", method=RequestMethod.DELETE)
+    @RequestMapping(path="/api/user/{id}", method=RequestMethod.DELETE)
     public void delete(@PathVariable(name = "id") long id){
         userService.delete(id);
     }
 
-    @RequestMapping(path="/login/{login}", method=RequestMethod.GET)
+    @RequestMapping(path="api/user/login/{login}", method=RequestMethod.GET)
     public User findByLogin(@PathVariable(name = "login") String login){
         return userService.findByLogin(login);
     }

@@ -21,7 +21,8 @@ const routes = [
   {path: 'allUsers', component: AllusersComponent},
   {path: 'allRooms', component: AllroomsComponent},
   {path: 'addRoom', component: AddRoomComponent},
-  {path: 'addMeeting', component: AddMeetingComponent}
+  {path: 'addMeeting', component: AddMeetingComponent},
+  {path: 'menu', component: MenuUserComponent}
 ];
 
 @NgModule({

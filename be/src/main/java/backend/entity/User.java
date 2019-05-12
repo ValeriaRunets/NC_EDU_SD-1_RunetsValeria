@@ -86,13 +86,4 @@ public class User {
                 Objects.equals(getPassword(), user.getPassword()) &&
                 Objects.equals(getLogin(), user.getLogin());
     }
-
-    public User(long id, String name, Role role, String password, String login, Collection<Meeting> meetings) {
-        this.id = id;
-        this.name = name;
-        this.role = role;
-        this.password = password;
-        this.login = login;
-        this.meetings = meetings;
-    }
 }

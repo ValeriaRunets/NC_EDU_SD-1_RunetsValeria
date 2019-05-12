@@ -41,13 +41,14 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public User addUser(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.postForEntity(backendServerUrl + "api/user/add", user, User.class).getBody();
+        user.setRole("USER");
+        return restTemplate.postForEntity(backendServerUrl + "api/user/", user, User.class).getBody();
     }
 
     @Override
     public void delete(long id) {
         RestTemplate restTemplate=new RestTemplate();
-        restTemplate.delete(backendServerUrl+"api/user/delete/" + id);
+        restTemplate.delete(backendServerUrl+"api/user/" + id);
     }
 
     @Override

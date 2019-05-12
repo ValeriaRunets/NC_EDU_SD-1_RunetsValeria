@@ -12,7 +12,7 @@ import {Room} from '../../model/Room';
   styleUrls: ['./add-meeting.component.css']
 })
 export class AddMeetingComponent implements OnInit {
-  private meeting: Meeting;
+  private meeting: Meeting = new Meeting();
   users: User[];
   rooms: Room[];
   constructor(private meetingService: MeetingService,

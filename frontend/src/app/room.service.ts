@@ -10,12 +10,12 @@ export class RoomService {
 
   constructor(private http: HttpClient) { }
   public addRoom(room: Room): Observable<any> {
-    return this.http.post('http://localhost:8081/api1/room/add', room);
+    return this.http.post('http://localhost:8081/api1/room/', room);
   }
   public getAll(): Observable<any> {
     return this.http.get('http://localhost:8081/api1/room/all');
   }
   public delete(id: number): Observable<any> {
-    return this.http.delete('http://localhost:8081/api1/room/delete/' + id);
+    return this.http.delete('http://localhost:8081/api1/room/' + id);
   }
 }

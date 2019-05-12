@@ -1,12 +1,15 @@
+<app-menu-user *ngIf="isAuthorized"></app-menu-user>
+<div *ngIf="!isAuthorized">
 <h1>LOG IN</h1>
-<form class="form-1" action="/src/app/calendar">
+<form class="form-1">
   <div>
     <label for="login">Login</label>
-    <input type="text" id="login">
+    <input type="text" id="login" (input)="setLogin($event.target.value)">
   </div>
   <div>
     <label for="password">Password</label>
-    <input type="password" id="password">
+    <input type="password" id="password" (input)="setPassword($event.target.value)">
   </div>
-  <button type="submit" onclick="window.location='http://www.google.com'">Log in</button>
+  <button type="submit" (click)="login()">Log in</button>
 </form>
+</div>

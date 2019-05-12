@@ -18,12 +18,12 @@ public class MeetingController {
         return meetingService.getById(id);
     }
 
-    @RequestMapping(path="/add", method= RequestMethod.POST)
+    @RequestMapping(method= RequestMethod.POST)
     public void addMeeting(@RequestBody Meeting meeting){
         meetingService.addMeeting(meeting);
     }
 
-    @RequestMapping(path="/delete/{id}", method= RequestMethod.GET)
+    @RequestMapping(path="/{id}", method= RequestMethod.DELETE)
     public void delete(@PathVariable(name="id") long id){
         meetingService.delete(id);
     }
