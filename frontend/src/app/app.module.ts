@@ -9,10 +9,13 @@ import { RouterModule} from '@angular/router';
 import { AddMeetingComponent } from './add-meeting/add-meeting.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import {UserService} from './user.service';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AllusersComponent } from './allusers/allusers.component';
 import {AllroomsComponent} from './allrooms/allrooms.component';
 import {AddRoomComponent} from './add-room/add-room.component';
+import {ApiService} from './api.service';
+import {TokenInterceptor} from './api.interceptor';
+import {FormBuilder} from "@angular/forms";
 
 const routes = [
   {path: 'log', component: LoginComponent},
@@ -42,7 +45,16 @@ const routes = [
     RouterModule.forRoot(routes),
     HttpClientModule
   ],
-  providers: [UserService],
+  providers: [
+    UserService,
+    ApiService,
+    FormBuilder,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

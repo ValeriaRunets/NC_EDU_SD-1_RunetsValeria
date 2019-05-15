@@ -64,4 +64,11 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         authorities.add(new SimpleGrantedAuthority("ROLE_" + user.getRole()));
         return authorities;
     }
+
+    @Override
+    public boolean isExist(String login) {
+        RestTemplate restTemplate=new RestTemplate();
+        return restTemplate.getForObject(backendServerUrl+"api/user/check/"+login, boolean.class);
+    }
+
 }

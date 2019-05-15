@@ -24,13 +24,12 @@ export class AddUserComponent implements OnInit {
     this.user.password = password;
   }
   public addUser() {
-    this.userService.getByLogin(this.user.login).subscribe((val: any) => this.checkLogin(val));
-    if (!this.flag) {
-      this.userService.addUser(this.user).subscribe();
-     }
+    this.userService.isExist(this.user.login).subscribe((val: any) => this.checkLogin(val));
   }
   public checkLogin(val) {
-    if (val != null) {
-      this.flag = true; }
+    this.flag = val;
+    if (!this.flag) {
+      this.userService.addUser(this.user).subscribe();
+    }
   }
 }

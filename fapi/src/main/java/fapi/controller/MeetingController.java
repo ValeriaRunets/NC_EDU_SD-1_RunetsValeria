@@ -23,7 +23,7 @@ public class MeetingController {
         return meetingService.getById(id);
     }
 
-    @RequestMapping(method= RequestMethod.POST)
+    @RequestMapping(method= RequestMethod.POST, produces = "application/json")
     public void addMeeting(@RequestBody Meeting meeting, @RequestHeader("Authorization") String token){
         String str=tokenProvider.getUsernameFromToken(token);
         meeting.setCreator(str);

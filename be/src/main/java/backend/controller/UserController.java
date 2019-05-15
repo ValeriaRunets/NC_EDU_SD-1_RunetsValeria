@@ -34,4 +34,8 @@ public class UserController {
     public User findByLogin(@PathVariable(name = "login") String login){
         return userService.findByLogin(login);
     }
+    @RequestMapping(path="api/user/check/{login}", method=RequestMethod.GET)
+    public boolean isExist(@PathVariable(name = "login") String login){
+        return userService.isExist(login);
+    }
 }

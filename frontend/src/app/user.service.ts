@@ -18,7 +18,7 @@ export class UserService {
   public delete(id: number): Observable<any> {
     return this.http.delete('http://localhost:8081/api1/user/' + id);
   }
-  public getByLogin(login: string): Observable<any> {
-    return this.http.get('http://localhost:8081/api1/user/login/' + login);
+  public isExist(login: string): Observable<any> {
+    return this.http.get('http://localhost:8081/api1/user/check/' + login);
   }
 }

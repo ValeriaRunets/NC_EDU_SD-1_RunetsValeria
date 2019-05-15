@@ -26,6 +26,12 @@ public class UserController {
         return userService.findByLogin(login);
     }
 
+    @GetMapping("/check/{login}")
+    public boolean isExist(@PathVariable(name = "login") String login) {
+        return userService.isExist(login);
+    }
+
+
     @RequestMapping(method = RequestMethod.POST, produces = "application/json")
     public User saveUser(@RequestBody User user) {
         return userService.addUser(user);

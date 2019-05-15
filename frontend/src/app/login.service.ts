@@ -12,7 +12,9 @@ export class LoginService {
   constructor(private http: HttpClient) { }
   login(user: User) {
     const param = JSON.stringify(user);
-    const headers = new HttpHeaders().set('Content-Type', 'application/json');
-    return this.http.post('http://localhost:8081/token/generate-token', param, {headers});
+    return this.http.post('http://localhost:8081/token/generate-token', user);
+  }
+  getToken(): string {
+    return localStorage.getItem('currentUser');
   }
 }

@@ -9,7 +9,8 @@
   <div>
     <label for="password">Password</label>
     <input type="password" id="password" (input)="setPassword($event.target.value)">
+    <p *ngIf="!flag">Login or password is wrong</p>
   </div>
-  <button type="submit" (click)="login()">Log in</button>
+  <button type="button" (click)="login()">Log in</button>
 </form>
 </div>

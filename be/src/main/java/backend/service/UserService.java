@@ -10,4 +10,5 @@ public interface UserService {
     List<User> getAll();
     User findByLogin(String login);
     User getById(long id);
+    boolean isExist(String login);
 }

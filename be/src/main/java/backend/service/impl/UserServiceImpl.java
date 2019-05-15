@@ -35,4 +35,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getById(long id) { return repository.findById(id).get(); }
+
+    @Override
+    public boolean isExist(String login) {
+        if (repository.findByLogin(login)==null){
+            return false;
+        }else
+            return true;
+    }
 }

@@ -1,0 +1,17 @@
+import { Injectable } from '@angular/core';
+import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {LoginService} from './login.service';
+
+@Injectable()
+export class TokenInterceptor implements HttpInterceptor {
+  constructor(public auth: LoginService) {}
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    if (this.auth.getToken() !== '' && this.auth.getToken() != null) {
+      request = request.clone({
+          headers: request.headers.set('Authorization', 'Bearer ' + this.auth.getToken())
+        });
+      console.log('11111111111111');
+    }
+    return next.handle(request);  }
+}
