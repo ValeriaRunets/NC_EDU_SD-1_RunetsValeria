@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   }
   login(): void {
       this.loginService.login(this.user).subscribe(dat => {this.saveToken(dat); },
-      error => {this.flag = false; this.isAuthorized = false; });
+      error => {this.flag = false; this.isAuthorized = false; return; });
   }
   saveToken(token: any) {
       window.localStorage.setItem('currentUser', token.token);

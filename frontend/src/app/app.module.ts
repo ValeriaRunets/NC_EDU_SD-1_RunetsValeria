@@ -13,9 +13,7 @@ import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AllusersComponent } from './allusers/allusers.component';
 import {AllroomsComponent} from './allrooms/allrooms.component';
 import {AddRoomComponent} from './add-room/add-room.component';
-import {ApiService} from './api.service';
 import {TokenInterceptor} from './api.interceptor';
-import {FormBuilder} from "@angular/forms";
 
 const routes = [
   {path: 'log', component: LoginComponent},
@@ -47,8 +45,6 @@ const routes = [
   ],
   providers: [
     UserService,
-    ApiService,
-    FormBuilder,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
