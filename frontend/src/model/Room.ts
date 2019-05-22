@@ -1,8 +1,6 @@
-import {Meeting} from './Meeting';
-
 export class Room {
-  id: number;
+  id: string;
   amount: number;
   adress: string;
-  meetings: Meeting[];
+  meetingsId: string[];
 }

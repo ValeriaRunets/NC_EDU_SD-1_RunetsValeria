@@ -15,6 +15,7 @@ export class AddMeetingComponent implements OnInit {
   private meeting: Meeting = new Meeting();
   users: User[];
   rooms: Room[];
+  id: string;
   constructor(private meetingService: MeetingService,
               private userService: UserService,
               private roomService: RoomService) { }
@@ -35,8 +36,14 @@ export class AddMeetingComponent implements OnInit {
   setTimeOfNotification(num: number) {
     this.meeting.timeOfNotification = num;
   }
-  setRoom(id: Room) {
-    this.meeting.room = id;
+  setRoom(event) {
+    this.id = event.target.value.toString();
+    this.meeting.idRoom = this.id;
+  }
+  setMember(event) {
+    this.id = event.target.value.toString();
+    this.meeting.membersId.push(this.id);
+    console.log(this.id);
   }
   addMeeting() {
     this.meetingService.addMeeting(this.meeting).subscribe();

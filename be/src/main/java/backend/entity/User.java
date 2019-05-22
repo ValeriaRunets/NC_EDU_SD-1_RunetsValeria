@@ -1,5 +1,8 @@
 package backend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.apache.tomcat.util.digester.ArrayStack;
+
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.*;
@@ -15,7 +18,8 @@ public class User {
     private String login;
     private Collection<Meeting> meetings;
 
-    public User(){}
+    public User(){meetings=new ArrayList<>();
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
@@ -63,10 +67,8 @@ public class User {
         this.login = login;
     }
 
-    @ManyToMany
-    @JoinTable(name = "user_has_meeting",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "meeting_id"))
+    @ManyToMany(mappedBy = "members")
+    @JsonIgnore(value = true)
     public Collection<Meeting> getMeetings() {
         return meetings;
     }
@@ -75,15 +77,5 @@ public class User {
         this.meetings = meetings;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof User)) return false;
-        User user = (User) o;
-        return getId() == user.getId() &&
-                Objects.equals(getName(), user.getName()) &&
-                getRole() == user.getRole() &&
-                Objects.equals(getPassword(), user.getPassword()) &&
-                Objects.equals(getLogin(), user.getLogin());
-    }
+
 }

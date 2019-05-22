@@ -15,7 +15,10 @@ export class RoomService {
   public getAll(): Observable<any> {
     return this.http.get('http://localhost:8081/api1/room/all');
   }
-  public delete(id: number): Observable<any> {
+  public delete(id: string): Observable<any> {
     return this.http.delete('http://localhost:8081/api1/room/' + id);
+  }
+  public getById(id: string): Observable<any> {
+    return this.http.get('http://localhost:8081/api1/room/' + id);
   }
 }

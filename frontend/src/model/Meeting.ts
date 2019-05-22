@@ -1,12 +1,13 @@
-import {User} from './User';
-import {Room} from './Room';
-
 export class Meeting {
-  id: number;
+  id: string;
+  creator: string;
   dateOfTheBeginning: string;
   dateOfEnd: string;
   theme: string;
-  room: Room;
+  idRoom: string;
   timeOfNotification: number;
-  members: User[];
+  membersId: string[];
+  constructor() {
+    this.membersId = [];
+  }
 }

@@ -13,8 +13,8 @@
   </div>
   <div>
     <label>Room</label>
-    <select>
-      <option *ngFor="let room of rooms; let i = index" [value]="room" (select)="setRoom($event.target.value)">{{room.adress}} {{room.amount}}</option>
+    <select (change)="setRoom($event)">
+      <option *ngFor="let room of rooms" value={{room.id}}>{{room.adress}} {{room.amount}}</option>
     </select>
   </div>
   <div>
@@ -23,8 +23,8 @@
   </div>
   <div>
     <label >Members</label>
-    <select multiple>
-      <option *ngFor="let user of users; let i = index">{{user.name}}</option>
+    <select (change)="setMember($event)" multiple>
+      <option *ngFor="let user of users" value="{{user.id}}">{{user.name}}</option>
     </select>
   </div>
   <button (click)="addMeeting()">Add</button>

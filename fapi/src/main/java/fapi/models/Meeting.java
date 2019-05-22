@@ -10,22 +10,22 @@ import java.util.Objects;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Meeting {
-    private long id;
+    private String id;
     private String creator;
     private Date dateOfTheBeginning;
     private Date dateOfEnd;
     private String theme;
-    private Room room;
+    private String idRoom;
     private int timeOfNotification;
-    private Collection<User> members;
+    private Collection<String> membersId;
 
     public Meeting(){}
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -61,12 +61,12 @@ public class Meeting {
         this.theme = theme;
     }
 
-    public Room getRoom() {
-        return room;
+    public String getIdRoom() {
+        return idRoom;
     }
 
-    public void setRoom(Room room) {
-        this.room = room;
+    public void setIdRoom(String idRoom) {
+        this.idRoom = idRoom;
     }
 
     public int getTimeOfNotification() {
@@ -77,45 +77,12 @@ public class Meeting {
         this.timeOfNotification = timeOfNotification;
     }
 
-    public Collection<User> getMembers() {
-        return members;
+    public Collection<String> getMembersId() {
+        return membersId;
     }
 
-    public void setMembers(Collection<User> members) {
-        this.members = members;
-    }
-
-    public void addMember(User member){members.add(member);}
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Meeting)) return false;
-        Meeting meeting = (Meeting) o;
-        return getId() == meeting.getId() &&
-                getTimeOfNotification() == meeting.getTimeOfNotification() &&
-                Objects.equals(getDateOfTheBeginning(), meeting.getDateOfTheBeginning()) &&
-                Objects.equals(getDateOfEnd(), meeting.getDateOfEnd()) &&
-                Objects.equals(getTheme(), meeting.getTheme()) &&
-                Objects.equals(getRoom(), meeting.getRoom());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId(), getDateOfTheBeginning(), getDateOfEnd(),  getTheme(), getRoom(), getTimeOfNotification());
-    }
-
-    @Override
-    public String toString() {
-        return "Meeting{" +
-                "id=" + id +
-                ", dateOfTheBeginning=" + dateOfTheBeginning +
-                ", dateOfEnd=" + dateOfEnd +
-                ", theme='" + theme + '\'' +
-                ", room=" + room +
-                ", timeOfNotification=" + timeOfNotification +
-                ", members=" +
-                '}';
+    public void setMembersId(Collection<String> membersId) {
+        this.membersId = membersId;
     }
 }
 

@@ -2,11 +2,11 @@
   <th>№</th>
   <th>Name</th>
   <th>Login</th>
-  <th>Delete button</th>
+  <th *ngIf="isAdmin">Delete button</th>
   <tr *ngFor="let user of users; let i = index">
     <td class="col">{{i+1}}</td>
     <td>{{user.name}}</td>
     <td>{{user.login}}</td>
-    <td class="col"><button (click)="delete(i)">Delete</button></td>
+    <td class="col" *ngIf="isAdmin"><button (click)="delete(i)">Delete</button></td>
   </tr>
 </table>

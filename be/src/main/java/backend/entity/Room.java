@@ -13,7 +13,7 @@ public class Room {
     private String adress;
     private Collection<Meeting> meetings;
 
-    public Room(){}
+    public Room(){meetings=new ArrayList<>();}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,7 +44,7 @@ public class Room {
         this.amount = amount;
     }
 
-    @OneToMany(mappedBy = "room")
+    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     public Collection<Meeting> getMeetings() {
         return meetings;
     }
@@ -53,29 +53,4 @@ public class Room {
         this.meetings = meetings;
     }
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Room)) return false;
-        Room room = (Room) o;
-        return getId() == room.getId() &&
-                getAmount() == room.getAmount() &&
-                Objects.equals(getAdress(), room.getAdress());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId(), getAmount(), getAdress());
-    }
-
-    @Override
-    public String toString() {
-        return "Room{" +
-                "id=" + id +
-                ", amount=" + amount +
-                ", adress='" + adress + '\'' +
-                ", meetings=" + meetings +
-                '}';
-    }
 }

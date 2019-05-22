@@ -71,4 +71,9 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         return restTemplate.getForObject(backendServerUrl+"api/user/check/"+login, boolean.class);
     }
 
+    @Override
+    public User getById(long id) {
+        RestTemplate restTemplate=new RestTemplate();
+        return restTemplate.getForObject(backendServerUrl+"api/user/" + id, User.class);
+    }
 }

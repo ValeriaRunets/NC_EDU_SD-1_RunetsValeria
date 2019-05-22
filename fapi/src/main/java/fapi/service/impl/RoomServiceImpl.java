@@ -27,7 +27,8 @@ public class RoomServiceImpl implements RoomService {
 
     @Override
     public Room getById(long id) {
-        return new Room();
+        RestTemplate restTemplate=new RestTemplate();
+        return restTemplate.getForObject(backendServerUrl+"api/room/" + id, Room.class);
     }
 
     @Override

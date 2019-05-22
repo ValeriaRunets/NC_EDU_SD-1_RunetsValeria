@@ -2,28 +2,24 @@ package fapi.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.Collection;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
-    private long id;
+    private String id;
     private String name;
     private String password;
     private String login;
     private String role;
+    private Collection<String> meetingsId;
 
     public User(){}
 
-    public User(long id, String name, String password, String login) {
-        this.id = id;
-        this.name = name;
-        this.password = password;
-        this.login = login;
-    }
-
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -59,4 +55,11 @@ public class User {
         this.role = role;
     }
 
+    public Collection<String> getMeetingsId() {
+        return meetingsId;
+    }
+
+    public void setMeetingsId(Collection<String> meetingsId) {
+        this.meetingsId = meetingsId;
+    }
 }

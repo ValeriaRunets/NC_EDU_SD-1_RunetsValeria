@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {User} from '../../model/User';
 import {LoginService} from '../login.service';
 import {Router} from '@angular/router';
@@ -8,13 +8,19 @@ import {Router} from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
   user: User = new User();
   isAuthorized = false;
   flag = true;
   constructor(private loginService: LoginService, private router: Router) { }
 
   ngOnInit() {
+    if (localStorage.getItem('currentUser') != null) {
+      this.isAuthorized = true;
+    }
+  }
+  ngOnDestroy() {
+    localStorage.removeItem('currentUser');
   }
   setLogin(str: string) {
     this.user.login = str;

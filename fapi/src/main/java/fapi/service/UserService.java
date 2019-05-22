@@ -16,4 +16,6 @@ public interface UserService {
     User findByLogin(String login);
 
     boolean isExist (String login);
+
+    User getById(long id);
 }

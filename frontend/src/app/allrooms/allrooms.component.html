@@ -3,12 +3,12 @@
     <th>№</th>
     <th>Adress</th>
     <th>Amount of places</th>
-    <th>Delete button</th>
+    <th *ngIf="isAdmin">Delete button</th>
   </tr>
   <tr *ngFor="let room of rooms; let i = index">
     <td class="col">{{i+1}}</td>
     <td>{{room.adress}}</td>
     <td>{{room.amount}}</td>
-    <td class="col"><button (click)="delete(i)">Delete</button></td>
+    <td class="col" *ngIf="isAdmin"><button (click)="delete(i)">Delete</button></td>
   </tr>
 </table>

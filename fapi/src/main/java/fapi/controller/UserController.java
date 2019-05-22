@@ -31,6 +31,10 @@ public class UserController {
         return userService.isExist(login);
     }
 
+    @RequestMapping(path="/{id}", method= RequestMethod.GET)
+    public User getById(@PathVariable(name="id") long id){
+        return userService.getById(id);
+    }
 
     @RequestMapping(method = RequestMethod.POST, produces = "application/json")
     public User saveUser(@RequestBody User user) {

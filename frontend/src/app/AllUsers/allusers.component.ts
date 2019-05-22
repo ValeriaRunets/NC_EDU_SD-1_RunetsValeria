@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../../model/User';
 import {UserService} from '../user.service';
+import {AuthenticationService} from '../authentication.service';
 
 @Component({
   selector: 'app-allusers',
@@ -9,10 +10,15 @@ import {UserService} from '../user.service';
 })
 export class AllusersComponent implements OnInit {
   users: User[];
-  constructor(private userService: UserService) { }
+  isAdmin: boolean;
+  constructor(private userService: UserService,
+              private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
     this.userService.getAll().subscribe((data: User[]) => this.users = data);
+    if (this.authenticationService.currentUsersRole === 'ADMIN') {
+      this.isAdmin = true;
+    }
   }
   public delete(i: number) {
     this.userService.delete(this.users[i].id).subscribe();

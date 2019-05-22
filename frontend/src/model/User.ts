@@ -1,6 +1,7 @@
 export class User {
-  id: number;
+  id: string;
   name: string;
   login: string;
   password: string;
+  meetingsId: string[];
 }

@@ -1,5 +1,7 @@
 package backend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.*;
 
 import java.util.Date;
@@ -19,7 +21,7 @@ public class Meeting {
     private int timeOfNotification;
     private Collection<User> members;
 
-    public Meeting(){}
+    public Meeting(){ members = new ArrayList<>();}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -69,7 +71,7 @@ public class Meeting {
         this.theme = theme;
     }
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name="room_id")
     public Room getRoom() {
         return room;
@@ -88,43 +90,15 @@ public class Meeting {
         this.timeOfNotification = timeOfNotification;
     }
 
-    @ManyToMany(mappedBy = "meetings")
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(name = "user_has_meeting",
+            joinColumns = @JoinColumn(name = "meeting_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id"))
     public Collection<User> getMembers() {
         return members;
     }
 
     public void setMembers(Collection<User> members) {
         this.members = members;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Meeting)) return false;
-        Meeting meeting = (Meeting) o;
-        return getId() == meeting.getId() &&
-                getTimeOfNotification() == meeting.getTimeOfNotification() &&
-                Objects.equals(getDateOfTheBeginning(), meeting.getDateOfTheBeginning()) &&
-                Objects.equals(getDateOfEnd(), meeting.getDateOfEnd()) &&
-                Objects.equals(getTheme(), meeting.getTheme()) &&
-                Objects.equals(getRoom(), meeting.getRoom());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId(), getDateOfTheBeginning(), getDateOfEnd(),  getTheme(), getRoom(), getTimeOfNotification());
-    }
-
-    @Override
-    public String toString() {
-        return "Meeting{" +
-                "id=" + id +
-                ", dateOfTheBeginning=" + dateOfTheBeginning +
-                ", dateOfEnd=" + dateOfEnd +
-                ", theme='" + theme + '\'' +
-                ", room=" + room +
-                ", timeOfNotification=" + timeOfNotification +
-                ", members=" +
-                '}';
     }
 }

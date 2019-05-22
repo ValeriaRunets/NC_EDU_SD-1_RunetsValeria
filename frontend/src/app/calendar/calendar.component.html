@@ -1,21 +1,48 @@
-<table border="2">
-  <caption>My Calendar</caption>
-  <tr>
-    <th>Monday</th>
-    <th>Tuesday</th>
-    <th>Wednesday</th>
-    <th>Thursday</th>
-    <th>Friday</th>
-    <th>Saturday</th>
-    <th>Sunday</th>
-  </tr>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-</table>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+  <table border="2">
+    <tr>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+      <th>Sunday</th>
+    </tr>
+    <tr *ngFor="let item of fakeArr; let i = index">
+      <td *ngFor="let meet of meetings; let j=index">
+        <div class="meet" *ngIf="meet[i] != undefined">{{i+1}}. Theme: {{meet[i]?.theme}}<div class="cross" (click)="delete(meetings[j][i])">&times;</div>
+          <p>begins at {{meet[i].dateOfTheBeginning.substr(11, 8)}}</p>
+          <p>ends at {{meet[i].dateOfEnd.substr(11, 8)}}</p>
+          <p>Address of room is "{{rooms[j][i]}}"</p>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{meet[i].membersId.length}} member(s)
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a *ngFor="let member of members[j][i]" href="#" class="dropdown-item" (click)="deleteUser(meetings[j][i], member.login)">{{member?.name}}</a>
+              <a href="#" class="dropdown-item">hello</a>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Right-aligned menu
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <button class="dropdown-item" type="button">Action</button>
+              <button class="dropdown-item" type="button">Another action</button>
+              <button class="dropdown-item" type="button">Something else here</button>
+            </div>
+          </div>
+      </div></td>
+    </tr>
+  </table>
+</body>
+</html>

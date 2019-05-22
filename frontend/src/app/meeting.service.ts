@@ -9,11 +9,16 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 export class MeetingService {
 
   constructor(private http: HttpClient) { }
-  public addMeeting(meeting: Meeting): Observable<Meeting> {
-    const headers = new HttpHeaders().set('Content-Type', 'application/json');
-    return this.http.post<Meeting>('http://localhost:8081/api1/meeting', meeting);
+  public addMeeting(meeting: Meeting): Observable<any> {
+    return this.http.post('http://localhost:8081/api1/meeting/', meeting);
   }
-  getAll(): Observable<any> {
-    return this.http.get('http://localhost:8081/api1/meeting/all');
+  getByDate(date): Observable<any> {
+    return this.http.post('http://localhost:8081/api1/meeting/date', date);
+  }
+  public delete(id: string, creator: string) {
+    return this.http.delete('http://localhost:8081/api1/meeting/' + id + '/' + creator);
+  }
+  public deleteForCur(meeting: Meeting, login: string) {
+    return this.http.put('http://localhost:8081/api1/meeting/' + login, meeting);
   }
 }

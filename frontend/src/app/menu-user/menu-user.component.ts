@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {AuthenticationService} from '../authentication.service';
 
 @Component({
   selector: 'app-menu-user',
@@ -7,12 +8,21 @@ import {Router} from '@angular/router';
   styleUrls: ['./menu-user.component.css']
 })
 export class MenuUserComponent implements OnInit {
-  constructor(private router: Router) {
+  private isAdmin: boolean;
+  constructor(private router: Router,
+              private authenticationService: AuthenticationService) {
   }
   ngOnInit() {
+    if (this.authenticationService.currentUsersRole === 'ADMIN') {
+      this.isAdmin = true;
+    }
   }
   goToPage(adress: string): void {
     this.router.navigate([adress]);
+  }
+  exit() {
+    localStorage.removeItem('currentUser');
+    window.location.reload();
   }
 }
 

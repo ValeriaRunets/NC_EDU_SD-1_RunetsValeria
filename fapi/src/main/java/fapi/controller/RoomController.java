@@ -17,12 +17,12 @@ public class RoomController {
         roomService.delete(id);
     }
 
-    @RequestMapping(method= RequestMethod.POST)
+    @RequestMapping(method= RequestMethod.POST, produces = "application/json")
     public Room addRoom(@RequestBody Room room){
         return roomService.addRoom(room);
     }
 
-    @RequestMapping(path="/room/{id}", method= RequestMethod.GET)
+    @RequestMapping(path="/{id}", method= RequestMethod.GET)
     public Room getById(@PathVariable(name="id") long id){
         return roomService.getById(id);
     }

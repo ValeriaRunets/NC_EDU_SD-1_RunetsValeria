@@ -8,18 +8,18 @@ import java.util.Objects;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Room {
-    private long id;
+    private String id;
     private int amount;
     private String adress;
-    private Collection<Meeting> meetings;
+    private Collection<String> meetingsId;
 
-    public Room(){}
+    public Room(){meetingsId=new ArrayList<>();}
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -39,37 +39,11 @@ public class Room {
         this.amount = amount;
     }
 
-    public Collection<Meeting> getMeetings() {
-        return meetings;
+    public Collection<String> getMeetingsId() {
+        return meetingsId;
     }
 
-    public void setMeetings(Collection<Meeting> meetings) {
-        this.meetings = meetings;
-    }
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Room)) return false;
-        Room room = (Room) o;
-        return getId() == room.getId() &&
-                getAmount() == room.getAmount() &&
-                Objects.equals(getAdress(), room.getAdress());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId(), getAmount(), getAdress());
-    }
-
-    @Override
-    public String toString() {
-        return "Room{" +
-                "id=" + id +
-                ", amount=" + amount +
-                ", adress='" + adress + '\'' +
-                ", meetings=" + meetings +
-                '}';
+    public void setMeetingsId(Collection<String> meetingsId) {
+        this.meetingsId = meetingsId;
     }
 }

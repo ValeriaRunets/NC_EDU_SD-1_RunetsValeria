@@ -1,9 +1,12 @@
 package backend.controller;
 
+import backend.dto.Converter;
+import backend.dto.RoomDto;
 import backend.entity.Room;
 import backend.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import java.util.*;
 
 import java.util.List;
 
@@ -12,23 +15,29 @@ import java.util.List;
 public class RoomController {
     @Autowired
     private RoomService roomService;
+    @Autowired
+    private Converter converter;
     @RequestMapping(path="/{id}", method= RequestMethod.DELETE)
     public void delete(@PathVariable(name = "id") long id){
         roomService.delete(id);
     }
 
     @RequestMapping(method= RequestMethod.POST)
-    public Room addRoom(@RequestBody Room room){
-        return roomService.addRoom(room);
+    public Room addRoom(@RequestBody RoomDto room){
+        return roomService.addRoom(converter.toRoom(room));
     }
 
-    @RequestMapping(path="/room/{id}", method= RequestMethod.GET)
-    public Room getById(@PathVariable(name="id") long id){
-        return roomService.getById(id);
+    @RequestMapping(path="/{id}", method= RequestMethod.GET)
+    public RoomDto getById(@PathVariable(name="id") long id){
+        return converter.fromRoom(roomService.getById(id));
     }
 
     @RequestMapping(path="/all", method= RequestMethod.GET)
-    public List<Room> getAll(){
-        return roomService.getAll();
+    public List<RoomDto> getAll(){
+        List list= new ArrayList<>();
+        for (Room room: roomService.getAll()){
+            list.add(converter.fromRoom(room));
+        }
+        return list;
     }
 }
