@@ -10,18 +10,18 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
   public addUser(user: User): Observable<any> {
-    return this.http.post('http://localhost:8081/api1/user/', user);
+    return this.http.post('api1/user/', user);
   }
   public getAll(): Observable<any> {
-    return this.http.get('http://localhost:8081/api1/user/all');
+    return this.http.get('api1/user/all');
   }
   public delete(id: string): Observable<any> {
-    return this.http.delete('http://localhost:8081/api1/user/' + id);
+    return this.http.delete('api1/user/' + id);
   }
   public isExist(login: string): Observable<any> {
-    return this.http.get('http://localhost:8081/api1/user/check/' + login);
+    return this.http.get('api1/user/check/' + login);
   }
   public getById(id: string): Observable<any> {
-    return this.http.get('http://localhost:8081/api1/user/' + id);
+    return this.http.get('api1/user/' + id);
   }
 }

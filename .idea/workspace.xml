@@ -1,73 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5d436e7-f886-4d0e-a9e3-b2232a1ff2e8" name="Default Changelist" comment="calendar">
-      <change beforePath="$PROJECT_DIR$/.idea/Calendar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Calendar.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6e6ad2af-414f-4b82-a6b2-1e1ad899b883.xml" beforeDir="false" />
+    <list default="true" id="b5d436e7-f886-4d0e-a9e3-b2232a1ff2e8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/backend/controller/MeetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/backend/controller/MeetingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/be/src/main/java/backend/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/backend/controller/RoomController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/be/src/main/java/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/backend/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/be/src/main/java/backend/entity/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/backend/entity/Meeting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/be/src/main/java/backend/entity/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/backend/entity/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/backend/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/backend/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/be/src/main/java/backend/repository/MeetingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/backend/repository/MeetingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/backend/service/MeetingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/backend/service/MeetingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be/src/main/java/backend/repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/backend/repository/RoomRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be/src/main/java/backend/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/backend/service/RoomService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/be/src/main/java/backend/service/impl/MeetingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/backend/service/impl/MeetingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/backend/controller/MeetingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/backend/controller/MeetingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be/src/main/java/backend/service/impl/RoomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/backend/service/impl/RoomServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be/src/main/java/backend/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/backend/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/be/target/classes/backend/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/backend/controller/RoomController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/be/target/classes/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/backend/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/backend/entity/Meeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/backend/entity/Meeting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/backend/entity/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/backend/entity/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/backend/entity/User$Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/backend/entity/User$Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/backend/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/backend/entity/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/be/target/classes/backend/repository/MeetingRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/backend/repository/MeetingRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/backend/service/MeetingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/backend/service/MeetingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be/target/classes/backend/repository/RoomRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/backend/repository/RoomRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be/target/classes/backend/service/RoomService.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/backend/service/RoomService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/be/target/classes/backend/service/impl/MeetingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/backend/service/impl/MeetingServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/fapi/controller/MeetingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/be/target/classes/backend/service/impl/RoomServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/backend/service/impl/RoomServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/fapi/controller/MeetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/fapi/controller/MeetingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fapi/src/main/java/fapi/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/fapi/controller/RoomController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fapi/src/main/java/fapi/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/fapi/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/fapi/models/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/fapi/models/Meeting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/fapi/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/fapi/models/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fapi/src/main/java/fapi/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/fapi/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/fapi/service/MeetingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/fapi/service/MeetingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/fapi/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/fapi/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/fapi/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/fapi/service/RoomService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/MeetingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/MeetingServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/RoomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/RoomServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fapi/target/classes/fapi/controller/MeetingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/fapi/controller/MeetingController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fapi/target/classes/fapi/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/fapi/controller/RoomController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fapi/target/classes/fapi/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/fapi/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/target/classes/fapi/models/Meeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/fapi/models/Meeting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/target/classes/fapi/models/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/fapi/models/Room.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fapi/target/classes/fapi/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/fapi/models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/target/classes/fapi/service/MeetingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/fapi/service/MeetingService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/target/classes/fapi/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/fapi/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/target/classes/fapi/service/RoomService.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/fapi/service/RoomService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fapi/target/classes/fapi/service/impl/MeetingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/fapi/service/impl/MeetingServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fapi/target/classes/fapi/service/impl/RoomServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/fapi/service/impl/RoomServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/target/classes/fapi/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/fapi/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@angular/animations/bundles/animations.umd.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@angular/animations/bundles/animations.umd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@angular/animations/fesm2015/animations.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@angular/animations/fesm2015/animations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fstream/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fstream/lib/writer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/fstream/lib/writer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fstream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/fstream/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/amd/handlebars/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/amd/handlebars/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/amd/handlebars/helpers/lookup.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/amd/handlebars/helpers/lookup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/cjs/handlebars/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/cjs/handlebars/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/cjs/handlebars/helpers/lookup.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/cjs/handlebars/helpers/lookup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.amd.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.amd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.amd.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.amd.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.runtime.amd.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.runtime.amd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.runtime.amd.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.runtime.amd.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.runtime.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/dist/handlebars.runtime.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/lib/handlebars.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/lib/handlebars/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/lib/handlebars/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/lib/handlebars/helpers/lookup.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/lib/handlebars/helpers/lookup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/handlebars/release-notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/handlebars/release-notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/tar/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/tar/lib/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/tar/lib/parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/tar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/tar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/uglify-js/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/uglify-js/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/bin/uglifyjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/uglify-js/bin/uglifyjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/lib/ast.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/uglify-js/lib/ast.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/lib/compress.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/uglify-js/lib/compress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/lib/minify.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/uglify-js/lib/minify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/lib/output.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/uglify-js/lib/output.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/lib/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/uglify-js/lib/parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/lib/scope.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/uglify-js/lib/scope.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/uglify-js/lib/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/node_modules/commander/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/node_modules/commander/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/node_modules/commander/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/node_modules/commander/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/node_modules/commander/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/node_modules/commander/typings/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/uglify-js/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/tools/domprops.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/uglify-js/tools/domprops.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/uglify-js/tools/props.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/uglify-js/tools/props.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/AllUsers/allusers.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/AllUsers/allusers.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/AllUsers/allusers.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/AllUsers/allusers.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/add-meeting/add-meeting.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/add-meeting/add-meeting.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/add-meeting/add-meeting.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/add-meeting/add-meeting.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/add-meeting/add-meeting.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/add-meeting/add-meeting.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/allrooms/allrooms.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/allrooms/allrooms.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/allrooms/allrooms.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/allrooms/allrooms.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/api.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/api.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/add-room/add-room.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/add-room/add-room.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/add-user/add-user.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/add-user/add-user.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/meeting.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/meeting.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/menu-user/menu-user.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/menu-user/menu-user.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/menu-user/menu-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/menu-user/menu-user.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/menu-user/menu-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/menu-user/menu-user.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/room.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/room.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/model/Meeting.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/model/Meeting.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/model/Room.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/model/Room.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/model/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/model/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/fapi/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -140,9 +170,10 @@
     <session id="-1804299156">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="37" />
+          <entry key="project.closed" value="41" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.21" value="1" />
@@ -153,55 +184,61 @@
           <entry key="project.open.time.28" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.31" value="1" />
-          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.32" value="2" />
           <entry key="project.open.time.33" value="3" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.36" value="2" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.41" value="2" />
+          <entry key="project.open.time.44" value="1" />
+          <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="5" />
-          <entry key="project.opened" value="38" />
+          <entry key="project.opened" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="499" />
-          <entry key="CSS" value="33" />
-          <entry key="Database Element" value="63" />
-          <entry key="HTML" value="139" />
+          <entry key="CLASS" value="564" />
+          <entry key="CSS" value="46" />
+          <entry key="Database Element" value="75" />
+          <entry key="HTML" value="153" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="801" />
-          <entry key="JSON" value="10" />
-          <entry key="JavaScript" value="2" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="895" />
+          <entry key="JSON" value="18" />
+          <entry key="JavaScript" value="4" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="17" />
-          <entry key="SQL" value="2" />
+          <entry key="SQL" value="5" />
           <entry key="Scratch" value="2" />
-          <entry key="TypeScript" value="493" />
+          <entry key="Spring Data QL" value="1" />
+          <entry key="TypeScript" value="537" />
           <entry key="XML" value="12" />
-          <entry key="tsconfig" value="2" />
+          <entry key="tsconfig" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="Angular2LanguageService" value="36" />
-          <entry key="TsLintLanguageService" value="35" />
+          <entry key="Angular2LanguageService" value="39" />
+          <entry key="TsLintLanguageService" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="374" />
-          <entry key="HTML" value="2496" />
-          <entry key="JAVA" value="5612" />
-          <entry key="JSON" value="1" />
+          <entry key="CSS" value="605" />
+          <entry key="HTML" value="3380" />
+          <entry key="JAVA" value="7066" />
+          <entry key="JSON" value="59" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="Properties" value="36" />
+          <entry key="SQL" value="2" />
           <entry key="Scratch" value="59" />
-          <entry key="TypeScript" value="8846" />
+          <entry key="Spring Data QL" value="4" />
+          <entry key="TypeScript" value="10469" />
         </counts>
       </usages-collector>
     </session>
@@ -209,19 +246,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/dto/RoomDto.java">
+        <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/controller/RoomController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#934#935#0" expanded="true" />
+                <element signature="e#1000#1001#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/dto/Converter.java">
+        <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/service/RoomService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+            <state relative-caret-position="187">
+              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -230,76 +272,80 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.html">
+        <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/controller/RoomController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-143">
-              <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176647">
-              <caret line="10391" column="8" selection-start-line="10391" selection-start-column="8" selection-end-line="10391" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/AllUsers/allusers.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/allrooms/allrooms.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="48" column="91" selection-start-line="48" selection-start-column="91" selection-end-line="48" selection-end-column="91" />
+            <state relative-caret-position="246">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
-                <element signature="e#0#50#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1243#1244#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/entity/User.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/service/impl/RoomServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="70" column="29" lean-forward="true" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.css">
+        <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state relative-caret-position="306">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/RoomServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="37" column="72" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE.jar!/org/springframework/web/client/RestTemplate.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="127" selection-start-line="127" selection-end-line="127" />
             </state>
           </provider>
         </entry>
@@ -325,57 +371,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frontend/src/app/login/login.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/api.interceptor.ts" />
-        <option value="$PROJECT_DIR$/be/src/main/java/backend/entity/DTO.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/room.service.ts" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/controller/RoomController.java" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/RoomServiceImpl.java" />
-        <option value="$PROJECT_DIR$/be/src/main/java/backend/controller/RoomController.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/AllUsers/allusers.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/allrooms/allrooms.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/menu-user/menu-user.component.css" />
-        <option value="$PROJECT_DIR$/frontend/src/app/menu-user/menu-user.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/authentication.service.ts" />
-        <option value="$PROJECT_DIR$/be/src/main/java/backend/service/MeetingService.java" />
-        <option value="$PROJECT_DIR$/frontend/src/model/User.ts" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/models/User.java" />
-        <option value="$PROJECT_DIR$/be/src/main/java/backend/dto/MeetingDto.java" />
-        <option value="$PROJECT_DIR$/frontend/src/model/Room.ts" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/models/Meeting.java" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/models/Room.java" />
-        <option value="$PROJECT_DIR$/be/src/main/java/backend/dto/RoomDto.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/add-meeting/add-meeting.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/model/Meeting.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/add-meeting/add-meeting.component.html" />
         <option value="$PROJECT_DIR$/be/src/main/java/backend/dto/UserDto.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/menu-user/menu-user.component.html" />
         <option value="$PROJECT_DIR$/frontend/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/be/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/frontend/src/app/user.service.ts" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/controller/UserController.java" />
         <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/service/UserService.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/service/MeetingService.java" />
+        <option value="$PROJECT_DIR$/be/src/main/java/backend/controller/MeetingController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/allrooms/allrooms.component.html" />
+        <option value="$PROJECT_DIR$/be/src/main/java/backend/entity/User.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/authentication.service.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/menu-user/menu-user.component.html" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/MeetingServiceImpl.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/login/login.component.css" />
+        <option value="$PROJECT_DIR$/frontend/src/app/add-user/add-user.component.css" />
+        <option value="$PROJECT_DIR$/frontend/src/app/add-room/add-room.component.css" />
+        <option value="$PROJECT_DIR$/frontend/src/app/add-meeting/add-meeting.component.css" />
+        <option value="$PROJECT_DIR$/be/src/main/java/backend/dto/Converter.java" />
         <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/be/src/main/java/backend/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/be/src/main/java/backend/repository/MeetingRepository.java" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/service/MeetingService.java" />
-        <option value="$PROJECT_DIR$/be/src/main/java/backend/entity/Room.java" />
-        <option value="$PROJECT_DIR$/be/src/main/java/backend/service/impl/MeetingServiceImpl.java" />
-        <option value="$PROJECT_DIR$/be/src/main/java/backend/controller/MeetingController.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/meeting.service.ts" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/controller/MeetingController.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/AllUsers/allusers.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/allrooms/allrooms.component.html" />
-        <option value="$PROJECT_DIR$/be/src/main/java/backend/entity/Meeting.java" />
-        <option value="$PROJECT_DIR$/be/src/main/java/backend/entity/User.java" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/MeetingServiceImpl.java" />
-        <option value="$PROJECT_DIR$/be/src/main/java/backend/dto/Converter.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/models/User.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.html" />
         <option value="$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.css" />
-        <option value="$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/add-meeting/add-meeting.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/styles.css" />
+        <option value="$PROJECT_DIR$/frontend/src/index.html" />
         <option value="$PROJECT_DIR$/frontend/package.json" />
+        <option value="$PROJECT_DIR$/frontend/src/app/AllUsers/allusers.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/proxy.conf.json" />
+        <option value="$PROJECT_DIR$/frontend/angular.json" />
+        <option value="$PROJECT_DIR$/frontend/src/proxy.conf.json" />
+        <option value="$PROJECT_DIR$/frontend/src/app/user.service.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/AllUsers/allusers.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/meeting.service.ts" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/controller/MeetingController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/login.service.ts" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/be/src/main/java/backend/repository/MeetingRepository.java" />
+        <option value="$PROJECT_DIR$/be/src/main/java/backend/service/impl/MeetingServiceImpl.java" />
+        <option value="$PROJECT_DIR$/be/src/main/java/backend/entity/Room.java" />
+        <option value="$PROJECT_DIR$/be/src/main/java/backend/entity/Meeting.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/add-meeting/add-meeting.component.ts" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/service/RoomService.java" />
+        <option value="$PROJECT_DIR$/be/src/main/java/backend/service/RoomService.java" />
+        <option value="$PROJECT_DIR$/be/src/main/java/backend/repository/RoomRepository.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/RoomServiceImpl.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/fapi/controller/RoomController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/room.service.ts" />
+        <option value="$PROJECT_DIR$/be/src/main/java/backend/controller/RoomController.java" />
+        <option value="$PROJECT_DIR$/be/src/main/java/backend/service/impl/RoomServiceImpl.java" />
+        <option value="$PROJECT_DIR$/be/src/main/java/backend/service/impl/UserServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -406,7 +452,7 @@
       <path value="$PROJECT_DIR$/frontend/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
@@ -418,8 +464,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -659,59 +703,14 @@
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="add-user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="allrooms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="AllUsers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="calendar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="menu-user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -722,9 +721,9 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558502993726" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558868885554" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/Java/мча2" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="E:\Calendar\frontend\node_modules\tslint" />
@@ -740,6 +739,10 @@
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="fapi.controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Calendar\frontend" />
+      <recent name="E:\Calendar\frontend\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -848,7 +851,11 @@
       <workItem from="1558002069506" duration="20474000" />
       <workItem from="1558105014791" duration="43765000" />
       <workItem from="1558354426693" duration="11736000" />
-      <workItem from="1558497534122" duration="5542000" />
+      <workItem from="1558497534122" duration="7775000" />
+      <workItem from="1558529488928" duration="409000" />
+      <workItem from="1558538543167" duration="10654000" />
+      <workItem from="1558593996623" duration="34903000" />
+      <workItem from="1558854071880" duration="10939000" />
     </task>
     <task id="LOCAL-00001" summary="f">
       <created>1554919642480</created>
@@ -871,11 +878,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555837644229</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="calendar">
+      <created>1558503109026</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558503109026</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266244000" />
+    <option name="totallyTimeSpent" value="325382000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -890,7 +904,7 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36845636" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3899329" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -900,7 +914,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" weight="0.31543624" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" visible="true" weight="0.31543624" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -909,9 +923,9 @@
       <window_info anchor="bottom" id="TypeScript" order="8" sideWeight="0.4986577" weight="0.304698" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49932885" weight="0.32885906" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067115" side_tool="true" weight="0.32885906" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32885906" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32885906" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32885906" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32885906" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32885906" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.32885906" />
       <window_info anchor="right" id="Preview" order="0" />
@@ -998,76 +1012,34 @@
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/fapi/src/main/java/fapi/controller/MeetingController.java</url>
-          <line>27</line>
+          <url>file://$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/MeetingServiceImpl.java</url>
+          <line>51</line>
           <properties />
-          <option name="timeStamp" value="45" />
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/be/src/main/java/backend/controller/MeetingController.java</url>
-          <line>31</line>
+          <url>file://$PROJECT_DIR$/fapi/src/main/java/fapi/controller/RoomController.java</url>
+          <line>37</line>
           <properties />
-          <option name="timeStamp" value="50" />
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/be/src/main/java/backend/controller/MeetingController.java</url>
-          <line>36</line>
+          <url>file://$PROJECT_DIR$/be/src/main/java/backend/service/impl/RoomServiceImpl.java</url>
+          <line>40</line>
           <properties />
-          <option name="timeStamp" value="51" />
+          <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/be/src/main/java/backend/dto/Converter.java</url>
-          <line>25</line>
+          <url>file://$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/RoomServiceImpl.java</url>
+          <line>40</line>
           <properties />
-          <option name="timeStamp" value="52" />
+          <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/be/src/main/java/backend/dto/Converter.java</url>
-          <line>36</line>
-          <properties />
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/be/src/main/java/backend/dto/Converter.java</url>
-          <line>46</line>
-          <properties />
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/be/src/main/java/backend/dto/Converter.java</url>
-          <line>84</line>
-          <properties />
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/fapi/src/main/java/fapi/controller/AuthenticationController.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/UserServiceImpl.java</url>
-          <line>55</line>
-          <properties />
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/be/src/main/java/backend/controller/UserController.java</url>
+          <url>file://$PROJECT_DIR$/be/src/main/java/backend/controller/RoomController.java</url>
           <line>43</line>
           <properties />
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/be/src/main/java/backend/controller/MeetingController.java</url>
-          <line>54</line>
-          <properties />
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/fapi/src/main/java/fapi/controller/MeetingController.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="63" />
+          <option name="timeStamp" value="73" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1077,6 +1049,20 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-177" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/api.interceptor.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1086,282 +1072,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/user.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/meeting.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/menu-user/menu-user.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f145fe99-2a1a-44dc-afcd-b23e9c50ff7b/schema/db_calendar/table/meeting">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f145fe99-2a1a-44dc-afcd-b23e9c50ff7b/schema/db_calendar/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="58" column="17" lean-forward="true" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
-          <folding>
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#803#804#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/controller/RoomController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.9.RELEASE/spring-webmvc-5.0.9.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="432" column="19" selection-start-line="432" selection-start-column="19" selection-end-line="432" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.8.RELEASE/spring-security-core-5.0.8.RELEASE.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.8.RELEASE/spring-security-core-5.0.8.RELEASE.jar!/org/springframework/security/authentication/ProviderManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="110" selection-start-line="110" selection-end-line="110" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/controller/AuthenticationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE.jar!/org/springframework/web/client/RestTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="168" selection-start-line="168" selection-end-line="168" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.9.RELEASE/spring-aop-5.0.9.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="147" selection-start-line="147" selection-end-line="147" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#640#641#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/repository/MeetingRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+        <state relative-caret-position="136">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/AllUsers/allusers.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="119">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/allrooms/allrooms.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="e#1463#1464#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.9.RELEASE/spring-webmvc-5.0.9.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.9.RELEASE/spring-webmvc-5.0.9.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="571" selection-start-line="571" selection-end-line="571" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/models/AuthToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/models/Meeting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/service/MeetingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/RoomServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="29" selection-start-line="29" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/MeetingServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/frontend/angular.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
+          <caret line="115" column="48" lean-forward="true" selection-start-line="115" selection-start-column="48" selection-end-line="115" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/service/impl/MeetingServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/frontend/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        <state relative-caret-position="119">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="das://f145fe99-2a1a-44dc-afcd-b23e9c50ff7b/schema/db_calendar/table/user_has_meeting">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/controller/MeetingController.java">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/user.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state relative-caret-position="408">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/controller/MeetingController.java">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/calendar.service.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/authentication.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/AllUsers/allusers.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1372,24 +1139,257 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/entity/Meeting.java">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="893">
+          <caret line="88" column="45" selection-start-line="88" selection-start-column="45" selection-end-line="88" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/dto/UserDto.java">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/meeting.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="255">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/proxy.conf.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/login.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/controller/MeetingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/repository/MeetingRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f145fe99-2a1a-44dc-afcd-b23e9c50ff7b/schema/db_calendar/table/room">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE.jar!/org/springframework/web/filter/RequestContextFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.34/tomcat-embed-core-8.5.34.jar!/org/apache/catalina/core/StandardWrapperValve.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="155" selection-start-line="155" selection-end-line="155" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.34/tomcat-embed-core-8.5.34.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.9.RELEASE/spring-aop-5.0.9.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/dto/Converter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/entity/Meeting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="110" column="5" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f145fe99-2a1a-44dc-afcd-b23e9c50ff7b/schema/db_calendar/table/meeting">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/service/impl/MeetingServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="43" column="85" lean-forward="true" selection-start-line="43" selection-start-column="85" selection-end-line="43" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/add-meeting/add-meeting.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="67" column="41" lean-forward="true" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/repository/RoomRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="148" selection-start-line="15" selection-start-column="148" selection-end-line="15" selection-end-column="148" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/BackendApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/service/RoomService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/room.service.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/room.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.9.RELEASE/spring-webmvc-5.0.9.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="570" selection-start-line="570" selection-end-line="570" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.9.RELEASE/spring-webmvc-5.0.9.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="425" selection-start-line="425" selection-end-line="425" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.9.RELEASE/spring-webmvc-5.0.9.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="484" selection-start-line="484" selection-end-line="484" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/entity/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="309">
+          <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE.jar!/org/springframework/web/client/RestTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/controller/RoomController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/service/RoomService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1398,84 +1398,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/service/impl/RoomServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/dto/Converter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/dto/RoomDto.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="277">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.css">
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/controller/RoomController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="48" column="91" selection-start-line="48" selection-start-column="91" selection-end-line="48" selection-end-column="91" />
+        <state relative-caret-position="246">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1243#1244#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/calendar/calendar.component.html">
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/fapi/service/impl/RoomServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        <state relative-caret-position="394">
+          <caret line="37" column="72" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-143">
-          <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176647">
-          <caret line="10391" column="8" selection-start-line="10391" selection-start-column="8" selection-end-line="10391" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/AllUsers/allusers.component.html">
+    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/allrooms/allrooms.component.ts">
+    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be/src/main/java/backend/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="70" column="29" lean-forward="true" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+        <state relative-caret-position="272">
+          <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
         </state>
       </provider>
     </entry>

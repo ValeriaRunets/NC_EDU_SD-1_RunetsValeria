@@ -14,6 +14,8 @@ import { AllusersComponent } from './allusers/allusers.component';
 import {AllroomsComponent} from './allrooms/allrooms.component';
 import {AddRoomComponent} from './add-room/add-room.component';
 import {TokenInterceptor} from './api.interceptor';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatDialogModule} from "@angular/material";
 
 const routes = [
   {path: 'log', component: LoginComponent},
@@ -40,8 +42,11 @@ const routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [
     UserService,

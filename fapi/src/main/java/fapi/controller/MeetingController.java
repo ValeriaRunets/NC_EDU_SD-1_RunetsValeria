@@ -1,14 +1,14 @@
  package fapi.controller;
 
-        import fapi.security.SecurityJwtConstants;
-        import fapi.security.TokenProvider;
-        import fapi.service.MeetingService;
-        import fapi.models.Meeting;
-        import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.web.bind.annotation.*;
+import fapi.security.SecurityJwtConstants;
+import fapi.security.TokenProvider;
+import fapi.service.MeetingService;
+import fapi.models.Meeting;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import java.util.*;
 
-        import java.util.*;
-
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("api1/meeting")
 public class MeetingController {
@@ -18,7 +18,7 @@ public class MeetingController {
     @Autowired
     private TokenProvider tokenProvider;
 
-    @RequestMapping(path="/meeting/{id}", method= RequestMethod.GET)
+    @RequestMapping(path="/{id}", method= RequestMethod.GET)
     public Meeting getById(@PathVariable(name="id") long id){
         return meetingService.getById(id);
     }
@@ -35,14 +35,9 @@ public class MeetingController {
         return meetingService.getByDate(date, str);
     }
 
-    @RequestMapping(path="/{id}/{creator}", method= RequestMethod.DELETE)
-    public void delete(@PathVariable(name="id") long id, @PathVariable(name="creator") String creator, @RequestHeader("Authorization") String token){
-        String str=tokenProvider.getUsernameFromToken(token.replace(SecurityJwtConstants.TOKEN_PREFIX+" ", ""));
-        if (str.equals(creator)) {
+    @RequestMapping(path="/{id}", method= RequestMethod.DELETE)
+    public void delete(@PathVariable(name="id") long id){
             meetingService.delete(id);
-        } else{
-            meetingService.deleteForCur(meetingService.getById(id) ,str);
-        }
     }
     @RequestMapping(path="/{login}", method= RequestMethod.PUT)
     public void deleteForCur(@PathVariable(name="login") String login, @RequestBody Meeting meeting){

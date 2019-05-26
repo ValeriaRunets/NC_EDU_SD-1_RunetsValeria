@@ -1,4 +1,4 @@
-.form-1 {
+form {
   width: 400px;
   margin: 60px auto 30px;
   padding: 10px;
@@ -10,7 +10,7 @@
 }
 label{
   width: 100%;
-  color: darkgray;
+  color: #525252;
   display: block;
   margin-bottom: 8px;
   margin-left: auto;
@@ -27,7 +27,7 @@ input{
   display: block;
   margin-bottom: 15px;
 }
-button{
+.add{
   padding: 10px 0;
   border-width: 0;
   display: block;
@@ -36,7 +36,7 @@ button{
   background: #60e6c5;
   color: white
 }
-button:hover{
+.add:hover{
   padding: 10px 0;
   border-width: 1px;
   display: block;
@@ -44,4 +44,23 @@ button:hover{
   margin: 25px auto 0;
   background: #60e6c5;
   color: white
+}
+.buttons{
+  display: flex;
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.option{
+  float: left;
+  display: inline;
+  width: 30px;
+}
+.btn-secondary{
+  background-color: white;
+  color: black;
+  text-align: left;
+}
+.btn-secondary:hover{
+  cursor: auto;
 }

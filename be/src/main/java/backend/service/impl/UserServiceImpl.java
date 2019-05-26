@@ -5,6 +5,8 @@ import backend.repository.UserRepository;
 import backend.service.UserService;
 import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -24,7 +26,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> getAll() {
-        return (List<User>) repository.findAll();
+        return (List<User>) repository.findAll(PageRequest.of(1, 5, Sort.by("name")));
     }
 
     @Override

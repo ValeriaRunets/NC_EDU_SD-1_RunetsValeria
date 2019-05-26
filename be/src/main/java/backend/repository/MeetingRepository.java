@@ -11,5 +11,6 @@ import java.util.*;
 @Repository
 public interface MeetingRepository extends JpaRepository<Meeting, Long> {
     //@Query(value="SELECT * FROM MEETING WHERE dateOfEnd >date2 AND dateOfEnd<d2", nativeQuery = true)
-    List<Meeting> findAllByDateOfEndBetween(Date d1, Date d2);
+    List<Meeting> findAllByDateOfEndBetweenOrderByDateOfTheBeginning(Date d1, Date d2);
+    List<Meeting> findAllByDateOfTheBeginningAfterOrDateOfEndBefore(Date date, Date d);
 }

@@ -5,8 +5,9 @@ import fapi.models.Room;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.*;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("api1/room")
 public class RoomController {
@@ -30,5 +31,10 @@ public class RoomController {
     @RequestMapping(path="/all", method= RequestMethod.GET)
     public List<Room> getAll(){
         return roomService.getAll();
+    }
+
+    @RequestMapping(path="/free", method= RequestMethod.POST, produces = "application/json")
+    public List<Room> getFree(@RequestBody Date[] dates){
+        return roomService.getFree(dates[0], dates[1]);
     }
 }

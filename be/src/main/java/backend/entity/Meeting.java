@@ -101,4 +101,12 @@ public class Meeting {
     public void setMembers(Collection<User> members) {
         this.members = members;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Meeting)) return false;
+        Meeting meeting = (Meeting) o;
+        return getId() == meeting.getId();
+    }
 }

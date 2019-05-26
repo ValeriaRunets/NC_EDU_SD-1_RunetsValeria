@@ -9,4 +9,5 @@ public interface RoomService {
     Room addRoom(Room room);
     Room getById(long id);
     List<Room> getAll();
+    List<Room> getFree(Date date1, Date date2);
 }

@@ -3,6 +3,7 @@ package fapi.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.Collection;
+import java.util.Objects;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
@@ -62,4 +63,18 @@ public class User {
     public void setMeetingsId(Collection<String> meetingsId) {
         this.meetingsId = meetingsId;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+        User user = (User) o;
+        return Objects.equals(getId(), user.getId()) &&
+                Objects.equals(getName(), user.getName()) &&
+                Objects.equals(getPassword(), user.getPassword()) &&
+                Objects.equals(getLogin(), user.getLogin()) &&
+                Objects.equals(getRole(), user.getRole()) &&
+                Objects.equals(getMeetingsId(), user.getMeetingsId());
+    }
+
 }

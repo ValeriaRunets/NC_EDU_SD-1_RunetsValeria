@@ -1,6 +1,7 @@
 package backend.service.impl;
 
 import backend.entity.Room;
+import backend.repository.MeetingRepository;
 import backend.repository.RoomRepository;
 import backend.service.RoomService;
 import java.util.*;
@@ -12,6 +13,8 @@ public class RoomServiceImpl implements RoomService {
 
     @Autowired
     private RoomRepository repository;
+    @Autowired
+    private MeetingRepository repos;
     @Override
     public void delete(long id) {
         repository.delete(repository.findById(id).get());
@@ -30,5 +33,13 @@ public class RoomServiceImpl implements RoomService {
     @Override
     public List<Room> getAll() {
         return (List<Room>)repository.findAll();
+    }
+
+    @Override
+    public List<Room> getFree(Date date1, Date date2) {
+        GregorianCalendar cal=new GregorianCalendar();
+        String str1=date1.toInstant().plusSeconds(3*3600).toString();
+        String str2=date2.toInstant().plusSeconds(3*3600).toString();
+        return repository.findFree(str1, str2);
     }
 }

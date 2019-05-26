@@ -50,6 +50,6 @@ public class MeetingServiceImpl implements MeetingService {
     @Override
     public void deleteForCur(Meeting meeting, String login) {
         RestTemplate restTemplate= new RestTemplate();
-        restTemplate.put(backendServerUrl+"api/meeting/"+login, meeting);
+        restTemplate.put(backendServerUrl+"api/meeting/"+login, meeting, Meeting.class);
     }
 }

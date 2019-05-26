@@ -14,28 +14,39 @@ import {UserService} from '../user.service';
 })
 export class CalendarComponent implements OnInit {
   private curDate: Date = new Date();
-  private day = this.curDate.getDay();
+  private end: Date = new Date();
+  private begin: Date = new Date();
+  private day;
   private date = new Date();
   private meetings: Meeting[][] = [];
   private rooms: string[][] = [];
   private members: User[][][] = [];
   private length = 0;
   private fakeArr ;
+  private curName: string;
   constructor(private meetingService: MeetingService,
               private  roomService: RoomService,
               private auth: AuthenticationService,
               private  userService: UserService) { }
 
   ngOnInit() {
-    console.log(this.curDate);
+    this.day = this.curDate.getDay();
     if (this.day === 0) {
+      this.begin.setDate(this.curDate.getDate() - 7 + 1);
       this.curDate.setDate(this.curDate.getDate() - 7 + 1);
     } else {
+      this.begin.setDate(this.curDate.getDate() - this.day + 1);
       this.curDate.setDate(this.curDate.getDate() - this.day + 1);
     }
+    this.end.setDate(this.begin.getDate() + 6);
+    this.show();
+    this.curName = this.auth.currentUserName;
+  }
+  show() {
     for (let i = 0; i < 7; i++) {
       this.meetings[i] = [];
-      this.meetingService.getByDate(this.date.setDate(this.curDate.getDate() + i)).subscribe((data: Meeting[]) => this.change(data, i));
+      this.date = new Date(this.curDate.valueOf() + 1000 * 3600 * 24 * i);
+      this.meetingService.getByDate(this.date).subscribe((data: Meeting[]) => this.change(data, i));
     }
   }
   change(data, i) {
@@ -56,9 +67,26 @@ export class CalendarComponent implements OnInit {
   }
   deleteUser(meeting: Meeting, name: string) {
     this.meetingService.deleteForCur(meeting, name).subscribe();
+    window.location.reload();
   }
   delete(meeting: Meeting) {
-    this.meetingService.delete(meeting.id, meeting.creator).subscribe();
+    if (meeting.creator === this.curName) {
+      this.meetingService.delete(meeting.id).subscribe();
+    } else {
+      this.deleteUser(meeting, this.curName);
+    }
     window.location.reload();
+  }
+  minusWeek() {
+    this.curDate.setDate(this.curDate.getDate() - 7);
+    this.begin.setDate(this.curDate.getDate());
+    this.end.setDate(this.begin.getDate() + 6);
+    this.show();
+  }
+  plusWeek() {
+    this.curDate.setDate(this.curDate.getDate() + 7);
+    this.begin.setDate( this.curDate.getDate());
+    this.end.setDate(this.begin.getDate() + 6)
+    this.show();
   }
 }

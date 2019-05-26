@@ -37,4 +37,12 @@ public class RoomServiceImpl implements RoomService {
         Room[] roomResponse = restTemplate.getForObject(backendServerUrl + "api/room/all", Room[].class);
         return roomResponse == null ? Collections.emptyList() : Arrays.asList(roomResponse);
     }
+    public List<Room> getFree(Date date1, Date date2) {
+        RestTemplate restTemplate = new RestTemplate();
+        Date dates[]=new Date[2];
+        dates[0]=date1;
+        dates[1]=date2;
+        Room[] roomResponse = restTemplate.postForObject(backendServerUrl + "api/room/free/", dates, Room[].class);
+        return roomResponse == null ? Collections.emptyList() : Arrays.asList(roomResponse);
+    }
 }

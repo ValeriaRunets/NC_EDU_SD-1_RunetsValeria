@@ -23,7 +23,7 @@ public class MeetingServiceImpl implements MeetingService {
 
     @Override
     public void addMeeting(Meeting meeting) {
-        //meeting.getMembers().add(repos.findByLogin(meeting.getCreator()));
+        meeting.getMembers().add(repos.findByLogin(meeting.getCreator()));
         repository.save(meeting);
     }
 
@@ -41,12 +41,13 @@ public class MeetingServiceImpl implements MeetingService {
     public List<Meeting> getByDate(Calendar date) {
         Date d1 = new Date(date.get(Calendar.YEAR)-1900, date.get(Calendar.MONTH), date.get(Calendar.DAY_OF_MONTH), 3, 1);
         Date d2 = new Date(date.get(Calendar.YEAR)-1900, date.get(Calendar.MONTH), date.get(Calendar.DAY_OF_MONTH)+1, 2, 59);
-        return repository.findAllByDateOfEndBetween(d1, d2);
+        return repository.findAllByDateOfEndBetweenOrderByDateOfTheBeginning(d1, d2);
     }
 
     @Override
     public void deleteForCur(Meeting meeting, String login) {
         User user = repos.findByLogin(login);
         meeting.getMembers().remove(user);
+        repository.save(meeting);
     }
 }

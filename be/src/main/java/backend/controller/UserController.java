@@ -40,8 +40,8 @@ public class UserController {
     }
 
     @RequestMapping(path="api/user/login/{login}", method=RequestMethod.GET)
-    public User findByLogin(@PathVariable(name = "login") String login){
-        return userService.findByLogin(login);
+    public UserDto findByLogin(@PathVariable(name = "login") String login){
+        return converter.fromUser(userService.findByLogin(login));
     }
 
     @RequestMapping(path="api/user/check/{login}", method=RequestMethod.GET)

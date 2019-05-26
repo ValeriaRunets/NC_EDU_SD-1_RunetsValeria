@@ -6,9 +6,8 @@ import backend.entity.Room;
 import backend.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import java.util.*;
 
-import java.util.List;
+import java.util.*;
 
 @RestController
 @RequestMapping("api/room")
@@ -36,6 +35,14 @@ public class RoomController {
     public List<RoomDto> getAll(){
         List list= new ArrayList<>();
         for (Room room: roomService.getAll()){
+            list.add(converter.fromRoom(room));
+        }
+        return list;
+    }
+    @RequestMapping(path="/free", method= RequestMethod.POST)
+    public List<RoomDto> getFree(@RequestBody Date[] dates){
+        List list= new ArrayList<>();
+        for (Room room: roomService.getFree(dates[0], dates[1])){
             list.add(converter.fromRoom(room));
         }
         return list;

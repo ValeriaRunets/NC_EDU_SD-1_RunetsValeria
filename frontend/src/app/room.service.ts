@@ -10,15 +10,19 @@ export class RoomService {
 
   constructor(private http: HttpClient) { }
   public addRoom(room: Room): Observable<any> {
-    return this.http.post('http://localhost:8081/api1/room/', room);
+    return this.http.post('api1/room/', room);
   }
   public getAll(): Observable<any> {
-    return this.http.get('http://localhost:8081/api1/room/all');
+    return this.http.get('api1/room/all');
   }
   public delete(id: string): Observable<any> {
-    return this.http.delete('http://localhost:8081/api1/room/' + id);
+    return this.http.delete('api1/room/' + id);
   }
   public getById(id: string): Observable<any> {
-    return this.http.get('http://localhost:8081/api1/room/' + id);
+    return this.http.get('api1/room/' + id);
+  }
+  public getFree(date1, date2) {
+    const dates = [date1, date2];
+    return this.http.post('api1/room/free', dates);
   }
 }

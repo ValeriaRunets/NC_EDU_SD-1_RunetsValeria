@@ -4,7 +4,7 @@ caption{
   font-family: Vivaldi;
 }
 table{
-  width: 70%;
+  width: 80%;
   margin-right: auto;
   margin-left: auto;
   background-color: blanchedalmond;
@@ -16,13 +16,34 @@ table{
   margin-right: 0px;
   margin-left: auto;
 }
+.user{
+  opacity: 0;
+  float: right;
+}
 .cross:hover{
+  cursor: pointer;
+}
+.user:hover{
   cursor: pointer;
 }
 .meet:hover .cross{
   opacity: 1;
 }
+.dropdown-item:hover .user{
+  opacity: 1;
+}
 td{
   width: 14%;
-  height: 500px;
+}
+.btn-group{
+  display: flex;
+  width: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+.date{
+  text-align: center;
+  font-family: Century;
+  font-size: large;
 }

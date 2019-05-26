@@ -10,15 +10,15 @@ export class MeetingService {
 
   constructor(private http: HttpClient) { }
   public addMeeting(meeting: Meeting): Observable<any> {
-    return this.http.post('http://localhost:8081/api1/meeting/', meeting);
+    return this.http.post('api1/meeting/', meeting);
   }
   getByDate(date): Observable<any> {
-    return this.http.post('http://localhost:8081/api1/meeting/date', date);
+    return this.http.post('api1/meeting/date', date);
   }
-  public delete(id: string, creator: string) {
-    return this.http.delete('http://localhost:8081/api1/meeting/' + id + '/' + creator);
+  public delete(id: string) {
+    return this.http.delete('api1/meeting/' + id);
   }
   public deleteForCur(meeting: Meeting, login: string) {
-    return this.http.put('http://localhost:8081/api1/meeting/' + login, meeting);
+    return this.http.put('api1/meeting/' + login, meeting);
   }
 }
