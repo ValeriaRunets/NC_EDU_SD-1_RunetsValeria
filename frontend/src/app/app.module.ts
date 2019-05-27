@@ -8,14 +8,16 @@ import { MenuUserComponent } from './menu-user/menu-user.component';
 import { RouterModule} from '@angular/router';
 import { AddMeetingComponent } from './add-meeting/add-meeting.component';
 import { AddUserComponent } from './add-user/add-user.component';
-import {UserService} from './user.service';
+import {UserService} from './service/user.service';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AllusersComponent } from './allusers/allusers.component';
 import {AllroomsComponent} from './allrooms/allrooms.component';
 import {AddRoomComponent} from './add-room/add-room.component';
 import {TokenInterceptor} from './api.interceptor';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatDialogModule} from "@angular/material";
+import {MatDialogModule, MatPaginator, MatPaginatorModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { DialogComponent } from './dialog/dialog.component';
 
 const routes = [
   {path: 'log', component: LoginComponent},
@@ -38,7 +40,8 @@ const routes = [
     AddUserComponent,
     AllusersComponent,
     AllroomsComponent,
-    AddRoomComponent
+    AddRoomComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,10 +49,16 @@ const routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule,
+    BrowserAnimationsModule
+  ],
+  entryComponents: [
+    DialogComponent
   ],
   providers: [
     UserService,
+    DialogComponent,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,

@@ -9,6 +9,7 @@ public class UserDto {
     private String login;
     private String role;
     private Collection<String> meetingsId;
+    private boolean firstEntr;
 
     public UserDto() {meetingsId=new ArrayList<>();
     }
@@ -59,5 +60,13 @@ public class UserDto {
 
     public void setMeetingsId(Collection<String> meetingsId) {
         this.meetingsId = meetingsId;
+    }
+
+    public boolean isFirstEntr() {
+        return firstEntr;
+    }
+
+    public void setFirstEntr(boolean firstEntr) {
+        this.firstEntr = firstEntr;
     }
 }

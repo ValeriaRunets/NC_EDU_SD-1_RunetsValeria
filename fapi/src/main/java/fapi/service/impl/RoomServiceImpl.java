@@ -45,4 +45,17 @@ public class RoomServiceImpl implements RoomService {
         Room[] roomResponse = restTemplate.postForObject(backendServerUrl + "api/room/free/", dates, Room[].class);
         return roomResponse == null ? Collections.emptyList() : Arrays.asList(roomResponse);
     }
+
+    @Override
+    public int count() {
+        RestTemplate restTemplate=new RestTemplate();
+        return restTemplate.getForObject(backendServerUrl+"api/room/count", int.class);
+    }
+
+    @Override
+    public List<Room> getPage(int page) {
+        RestTemplate restTemplate = new RestTemplate();
+        Room[] usersResponse = restTemplate.getForObject(backendServerUrl + "api/room/p?page="+page, Room[].class);
+        return usersResponse == null ? Collections.emptyList() : Arrays.asList(usersResponse);
+    }
 }

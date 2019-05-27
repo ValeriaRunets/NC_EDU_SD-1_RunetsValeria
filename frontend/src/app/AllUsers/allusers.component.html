@@ -1,18 +1,14 @@
 <table border="3">
-  <th>№</th>
   <th>Name</th>
   <th>Login</th>
   <th *ngIf="isAdmin">Delete button</th>
   <tr *ngFor="let user of users; let i = index">
-    <td class="col">{{i+1}}</td>
     <td>{{user.name}}</td>
     <td>{{user.login}}</td>
     <td class="col" *ngIf="isAdmin"><button *ngIf="user.login!='admin'" (click)="delete(i)">Delete</button></td>
-    <!--<mat-dialog-content>Are you sure?</mat-dialog-content>-->
-    <!--<mat-dialog-actions>-->
-      <!--<button mat-button mat-dialog-close>No</button>-->
-      <!--&lt;!&ndash; The mat-dialog-close directive optionally accepts a value as a result for the dialog. &ndash;&gt;-->
-      <!--<button mat-button [mat-dialog-close]="true">Yes</button>-->
-    <!--</mat-dialog-actions>-->
   </tr>
 </table>
+<mat-paginator [length]="length"
+               [pageSize]="pageSize"
+               (page)="pageEvent = $event; change();">
+</mat-paginator>

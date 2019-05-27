@@ -47,4 +47,15 @@ public class RoomController {
         }
         return list;
     }
+    @RequestMapping(path = "/count", method = RequestMethod.GET)
+    public int count(){return roomService.count();}
+
+    @RequestMapping(path="/p", params = {"page"}, method= RequestMethod.GET)
+    public List<RoomDto> getPage(@RequestParam("page") int page){
+        List list= new ArrayList<>();
+        for (Room room: roomService.getPage(page)){
+            list.add(converter.fromRoom(room));
+        }
+        return list;
+    }
 }

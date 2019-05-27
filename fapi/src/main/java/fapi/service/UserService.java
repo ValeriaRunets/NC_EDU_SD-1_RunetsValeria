@@ -11,11 +11,13 @@ public interface UserService {
 
     User addUser(User user);
 
-    List<User> getAll();
+    List<User> getAll(int page);
 
     User findByLogin(String login);
 
     boolean isExist (String login);
 
     User getById(long id);
+
+    int count();
 }

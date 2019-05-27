@@ -1,6 +1,8 @@
 package fapi.controller;
 
 import fapi.models.User;
+import fapi.security.SecurityJwtConstants;
+import fapi.security.TokenProvider;
 import fapi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,9 +17,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/all")
-    public List<User> getAllUsers() {
-        return userService.getAll();
+    @Autowired
+    private TokenProvider tokenProvider;
+
+    @GetMapping(path = "/all", params = { "page"})
+    public List<User> getAllUsers(@RequestParam("page") int page) {
+        return userService.getAll(page);
     }
 
     @GetMapping("/login/{login}")
@@ -37,11 +42,30 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.POST, produces = "application/json")
     public User saveUser(@RequestBody User user) {
+        user.setFirstEntr(true);
         return userService.addUser(user);
     }
 
     @RequestMapping(path="/{id}", method= RequestMethod.DELETE)
     public void delete(@PathVariable(name = "id") long id) {
         userService.delete(id);
+    }
+    @GetMapping("/count")
+    public int count(){
+        return userService.count();
+    }
+    @RequestMapping(path="/first", method= RequestMethod.GET)
+    public boolean isFirst(@RequestHeader("Authorization") String token) {
+        String str=tokenProvider.getUsernameFromToken(token.replace(SecurityJwtConstants.TOKEN_PREFIX+" ", ""));
+        return getUserByLogin(str).isFirstEntr();
+    }
+
+    @RequestMapping(method= RequestMethod.PUT)
+    public void changePassword(@RequestBody String password, @RequestHeader("Authorization") String token){
+        String str=tokenProvider.getUsernameFromToken(token.replace(SecurityJwtConstants.TOKEN_PREFIX+" ", ""));
+        User user=getUserByLogin(str);
+        user.setFirstEntr(false);
+        user.setPassword(password);
+        userService.addUser(user);
     }
 }

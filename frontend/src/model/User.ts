@@ -4,4 +4,5 @@ export class User {
   login: string;
   password: string;
   meetingsId: string[];
+  firstEntr: boolean;
 }

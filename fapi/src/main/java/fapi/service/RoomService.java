@@ -11,4 +11,6 @@ public interface RoomService {
     Room getById(long id);
     List<Room> getAll();
     List<Room> getFree(Date date1, Date date2);
+    int count();
+    List<Room> getPage(int page);
 }

@@ -80,6 +80,7 @@ public class Converter {
         ans.setName(user.getName());
         ans.setPassword(user.getPassword());
         ans.setRole(user.getRole().toString());
+        ans.setFirstEntr(user.isFirstEntr());
         for (Meeting meeting: user.getMeetings()){
             ans.getMeetingsId().add(Long.toString(meeting.getId()));
         }
@@ -93,6 +94,7 @@ public class Converter {
         ans.setLogin(user.getLogin());
         ans.setName(user.getName());
         ans.setPassword(user.getPassword());
+        ans.setFirstEntr(user.isFirstEntr());
         ans.setRole(User.Role.valueOf(user.getRole()));
         return ans;
     }

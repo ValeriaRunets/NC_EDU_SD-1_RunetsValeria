@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {MeetingService} from '../meeting.service';
 import {Meeting} from '../../model/Meeting';
 import {User} from '../../model/User';
-import {UserService} from '../user.service';
-import {RoomService} from '../room.service';
 import {Room} from '../../model/Room';
 import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {AuthenticationService} from "../authentication.service";
+import {PageEvent} from '@angular/material';
+import {MeetingService} from '../service/meeting.service';
+import {UserService} from '../service/user.service';
+import {RoomService} from '../service/room.service';
+import {AuthenticationService} from '../service/authentication.service';
 
 @Component({
   selector: 'app-add-meeting',
@@ -24,6 +25,9 @@ export class AddMeetingComponent implements OnInit {
   val = 0;
   firstGroup: FormGroup[] = [];
   curName: string;
+  length = 0;
+  pageSize = 5;
+  pageEvent: PageEvent;
   constructor(private meetingService: MeetingService,
               private userService: UserService,
               private roomService: RoomService,
@@ -31,8 +35,9 @@ export class AddMeetingComponent implements OnInit {
               private auth: AuthenticationService) { }
 
   ngOnInit() {
+    this.userService.count().subscribe((data: number) => this.length = data);
     this.curName = this.auth.currentUserName;
-    this.userService.getAll().subscribe((data: User[]) => this.users = data);
+    this.userService.getAll(0).subscribe((data: User[]) => this.users = data);
     // this.roomService.getAll().subscribe((data: Room[]) => this.rooms = data);
     this.initForm();
   }
@@ -81,5 +86,8 @@ export class AddMeetingComponent implements OnInit {
   }
   chRoom(room) {
     this.val = room.amount;
+  }
+  changePage() {
+    this.userService.getAll(this.pageEvent.pageIndex).subscribe((data: User[]) => this.users = data);
   }
 }

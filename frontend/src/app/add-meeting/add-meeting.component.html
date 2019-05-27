@@ -26,8 +26,12 @@
 <form *ngIf="page==3">
   <ul class="list-group">
     <li *ngFor="let user of users" class="btn btn-secondary">
-      <input [checked]="user.name==curName" [disabled]="count==val-1 || user.name==curName" type="checkbox" value="{{user.id}}" class="option" autocomplete="off" (change)="change($event)" >{{user.name}}</li>
+      <input [checked]="user.login==curName || members.includes(user.id)" [disabled]="(count==val-1 && !members.includes(user.id)) || user.login==curName" type="checkbox" value="{{user.id}}" class="option" autocomplete="off" (change)="change($event)" >{{user.name}}</li>
   </ul>
+  <mat-paginator [length]="length"
+                 [pageSize]="pageSize"
+                 (page)="pageEvent = $event; changePage();">
+  </mat-paginator>
   <button class="add" (click)="addMeeting()">Add</button>
 </form>
 <div class="buttons">

@@ -37,4 +37,12 @@ public class RoomController {
     public List<Room> getFree(@RequestBody Date[] dates){
         return roomService.getFree(dates[0], dates[1]);
     }
+    @GetMapping("/count")
+    public int count(){
+        return roomService.count();
+    }
+    @GetMapping(path = "/p", params = { "page"})
+    public List<Room> getAllUsers(@RequestParam("page") int page) {
+        return roomService.getPage(page);
+    }
 }

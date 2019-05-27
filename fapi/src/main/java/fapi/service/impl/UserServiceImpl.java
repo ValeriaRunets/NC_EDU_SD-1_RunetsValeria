@@ -31,9 +31,9 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
-    public List<User> getAll() {
+    public List<User> getAll(int page) {
         RestTemplate restTemplate = new RestTemplate();
-        User[] usersResponse = restTemplate.getForObject(backendServerUrl + "api/user/all", User[].class);
+        User[] usersResponse = restTemplate.getForObject(backendServerUrl + "api/user/all?page="+page, User[].class);
         return usersResponse == null ? Collections.emptyList() : Arrays.asList(usersResponse);
     }
 
@@ -75,5 +75,11 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public User getById(long id) {
         RestTemplate restTemplate=new RestTemplate();
         return restTemplate.getForObject(backendServerUrl+"api/user/" + id, User.class);
+    }
+
+    @Override
+    public int count() {
+        RestTemplate restTemplate=new RestTemplate();
+        return restTemplate.getForObject(backendServerUrl+"api/user/count", int.class);
     }
 }

@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Change your password</h1>
+<div mat-dialog-content>
+  <p>Password</p>
+  <form [formGroup]="form">
+    <input type="password" matInput (input)="password=$event.target.value" formControlName="password">
+    <p *ngIf="form.invalid">Password should contain 6 symbols</p>
+  </form>
+  <p>Repeat password</p>
+  <form>
+    <input type="password" matInput (input)="password1=$event.target.value">
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button *ngIf="password==password1" [mat-dialog-close]="password" cdkFocusInitial>Ok</button>
+</div>

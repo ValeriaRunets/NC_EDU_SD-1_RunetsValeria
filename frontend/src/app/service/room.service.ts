@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
-import {Room} from '../model/Room';
+import {Room} from '../../model/Room';
 import {HttpClient} from '@angular/common/http';
 
 @Injectable({
@@ -24,5 +24,11 @@ export class RoomService {
   public getFree(date1, date2) {
     const dates = [date1, date2];
     return this.http.post('api1/room/free', dates);
+  }
+  public getPage(page) {
+    return this.http.get('api1/room/p?page=' + page);
+  }
+  public count() {
+    return this.http.get('api1/room/count');
   }
 }

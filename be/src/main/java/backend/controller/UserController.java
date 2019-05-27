@@ -24,9 +24,9 @@ public class UserController {
         return converter.fromUser(userService.addUser(converter.toUser(user)));
     }
 
-    @RequestMapping(path="/api/user/all", method=RequestMethod.GET)
-    public List<UserDto> findAll(){
-        List<User> list = userService.getAll();
+    @RequestMapping(params = {"page"}, path="/api/user/all", method=RequestMethod.GET)
+    public List<UserDto> findAll(@RequestParam("page") int page){
+        List<User> list = userService.getAll(page);
         List<UserDto> ans=new ArrayList<>();
         for (User user: list){
             ans.add(converter.fromUser(user));
@@ -53,4 +53,7 @@ public class UserController {
     public UserDto getById(@PathVariable(name="id") long id){
         return converter.fromUser(userService.getById(id));
     }
+
+    @RequestMapping(path = "api/user/count", method = RequestMethod.GET)
+    public int count(){return userService.count();}
 }

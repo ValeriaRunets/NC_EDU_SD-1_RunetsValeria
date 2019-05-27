@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
+    int SIZE_OF_PAGE=5;
     @Autowired
     private UserRepository repository;
     @Override
@@ -25,8 +26,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getAll() {
-        return (List<User>) repository.findAll(PageRequest.of(1, 5, Sort.by("name")));
+    public List<User> getAll(int page) {
+        return  repository.findAll(PageRequest.of(page, SIZE_OF_PAGE, Sort.by("name"))).getContent();
     }
 
     @Override
@@ -44,5 +45,10 @@ public class UserServiceImpl implements UserService {
             return false;
         }else
             return true;
+    }
+
+    @Override
+    public int count() {
+        return (int)repository.count();
     }
 }

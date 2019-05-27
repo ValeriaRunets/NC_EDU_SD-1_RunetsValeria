@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {Meeting} from '../../model/Meeting';
-import {MeetingService} from '../meeting.service';
-import {RoomService} from '../room.service';
+import {MeetingService} from '../service/meeting.service';
+import {RoomService} from '../service/room.service';
 import {Room} from '../../model/Room';
-import {AuthenticationService} from '../authentication.service';
+import {AuthenticationService} from '../service/authentication.service';
 import {User} from '../../model/User';
-import {UserService} from '../user.service';
+import {UserService} from '../service/user.service';
 
 @Component({
   selector: 'app-calendar',
@@ -38,7 +38,7 @@ export class CalendarComponent implements OnInit {
       this.begin.setDate(this.curDate.getDate() - this.day + 1);
       this.curDate.setDate(this.curDate.getDate() - this.day + 1);
     }
-    this.end.setDate(this.begin.getDate() + 6);
+    this.end.setDate(this.curDate.getDate() + 6);
     this.show();
     this.curName = this.auth.currentUserName;
   }
@@ -79,14 +79,13 @@ export class CalendarComponent implements OnInit {
   }
   minusWeek() {
     this.curDate.setDate(this.curDate.getDate() - 7);
-    this.begin.setDate(this.curDate.getDate());
-    this.end.setDate(this.begin.getDate() + 6);
+    this.end = new Date(this.curDate.valueOf() + 6 * 24 * 3600 * 1000);
     this.show();
   }
   plusWeek() {
     this.curDate.setDate(this.curDate.getDate() + 7);
-    this.begin.setDate( this.curDate.getDate());
-    this.end.setDate(this.begin.getDate() + 6)
+    console.log(this.curDate);
+    this.end = new Date(this.curDate.valueOf() + 6 * 24 * 3600 * 1000);
     this.show();
   }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
-import {Meeting} from '../model/Meeting';
+import {Meeting} from '../../model/Meeting';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable({

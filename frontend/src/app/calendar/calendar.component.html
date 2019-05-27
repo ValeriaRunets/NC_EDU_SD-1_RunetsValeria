@@ -21,7 +21,7 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a *ngFor="let member of members[j][i]" href="#" class="dropdown-item">{{member?.name}}
-                <div *ngIf="curName != member?.name && meet[i].creator != member?.name" class="user" (click)="deleteUser(meetings[j][i], member.name)">&times;</div>
+                <div *ngIf="curName != member?.login && meet[i].creator != member?.login" class="user" (click)="deleteUser(meetings[j][i], member.name)">&times;</div>
               </a>
             </div>
           </div>
@@ -32,4 +32,4 @@
     <button type="button" class="btn btn-secondary" (click)="minusWeek()"><-</button>
     <button type="button" class="btn btn-secondary" (click)="plusWeek()">-></button>
   </div>
-  <div class="date">{{begin.getDate()}}:{{begin.getMonth()+1}}:{{begin.getFullYear()}}-{{end.getDate()}}:{{end.getMonth()+1}}:{{end.getFullYear()}}</div>
+  <div class="date">{{curDate.getDate()}}:{{curDate.getMonth()+1}}:{{curDate.getFullYear()}}-{{end.getDate()}}:{{end.getMonth()+1}}:{{end.getFullYear()}}</div>

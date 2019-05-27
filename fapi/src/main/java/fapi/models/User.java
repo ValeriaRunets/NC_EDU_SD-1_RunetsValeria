@@ -13,6 +13,7 @@ public class User {
     private String login;
     private String role;
     private Collection<String> meetingsId;
+    private boolean firstEntr;
 
     public User(){}
 
@@ -77,4 +78,11 @@ public class User {
                 Objects.equals(getMeetingsId(), user.getMeetingsId());
     }
 
+    public boolean isFirstEntr() {
+        return firstEntr;
+    }
+
+    public void setFirstEntr(boolean firstEntr) {
+        this.firstEntr = firstEntr;
+    }
 }

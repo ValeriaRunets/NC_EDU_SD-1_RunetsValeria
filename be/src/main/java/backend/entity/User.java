@@ -17,6 +17,7 @@ public class User {
     private String password;
     private String login;
     private Collection<Meeting> meetings;
+    private boolean firstEntr;
 
     public User(){meetings=new ArrayList<>();
     }
@@ -77,5 +78,12 @@ public class User {
         this.meetings = meetings;
     }
 
+    @Column(name = "entrance")
+    public boolean isFirstEntr() {
+        return firstEntr;
+    }
 
+    public void setFirstEntr(boolean firstEntr) {
+        this.firstEntr = firstEntr;
+    }
 }
